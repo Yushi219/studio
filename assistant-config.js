@@ -28,8 +28,10 @@
    (echo assistant-config.js >> .gitignore) and never commit it.
    ============================================================ */
 window.ASSISTANT_CONFIG = {
-  // Safe for public sites: your serverless proxy endpoint (POST {messages} -> {text})
-  proxyUrl: '',
+  // Safe for public sites: serverless proxy endpoint (POST {messages} -> {text}).
+  // Vercel function api/chat.js holds the key as an env var (OPENAI_API_KEY).
+  // Same-origin path → no CORS. Empty key → assistant uses offline KB mode.
+  proxyUrl: '/api/chat',
 
   // Local testing ONLY — leave '' for a public GitHub deploy
   apiKey: '',
