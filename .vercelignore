@@ -1,0 +1,27 @@
+# Vercel CLI uploads the local folder — keep the heavy stuff OUT.
+# The deployed site needs only code + small images; every video is
+# served from Azure Blob (see video-config.js), so NO mp4 ships here.
+
+# videos (all served from the CDN, never from Vercel)
+*.mp4
+*.mov
+*.webm
+*.m4v
+*.avi
+
+# build-only / source-only / dev artifacts (huge, not part of the site)
+_video_dist/
+assets/g/
+assets/deck/
+assets/dm/
+_pdftmp/
+uploads/
+screenshots/
+
+# tooling / local
+node_modules/
+.git
+.env
+.env*.local
+*.tmp
+*.tmp.*
