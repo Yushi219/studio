@@ -20,14 +20,19 @@
 (() => {
   'use strict';
   window.VIDEO_SRC = window.VIDEO_SRC || {
-    base: '',     // e.g. 'https://videos.yushiwang.com/'   (overseas: Azure Blob + Front Door)
-    baseCN: '',   // e.g. 'https://cn-videos.yushiwang.com/' (China: Aliyun OSS / Tencent COS + ICP)
+    // Production video CDN (Azure Blob + Front Door). Live once you finish
+    // the Azure steps + upload _video_dist + bind videos.yushiwang.studio.
+    base: 'https://videos.yushiwang.studio/',
+    baseCN: '',   // later: Aliyun OSS / Tencent COS + ICP, e.g. 'https://cn-videos.yushiwang.studio/'
     useCN: false
   };
   const C = window.VIDEO_SRC;
   try { C.useCN = localStorage.getItem('yw_video_cn') === '1' && !!C.baseCN; } catch (e) {}
 
-  const activeBase = () => (C.useCN && C.baseCN) ? C.baseCN : C.base;
+  // On localhost / the preview server, always use the bundled /assets files
+  // so local development keeps working before the CDN is up.
+  const isLocal = /^(localhost|127\.|0\.0\.0\.0|\[::1\]|.*\.local)$/i.test(location.hostname) || location.protocol === 'file:';
+  const activeBase = () => isLocal ? '' : ((C.useCN && C.baseCN) ? C.baseCN : C.base);
   // pull the "assets/….mp4" path out of any local src
   const localPath = s => {
     if (!s) return null;
