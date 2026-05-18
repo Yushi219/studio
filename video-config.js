@@ -20,9 +20,9 @@
 (() => {
   'use strict';
   window.VIDEO_SRC = window.VIDEO_SRC || {
-    // Production video CDN (Azure Blob + Front Door). Live once you finish
-    // the Azure steps + upload _video_dist + bind videos.yushiwang.studio.
-    base: 'https://videos.yushiwang.studio/',
+    // Production videos — Azure Blob (Front Door blocked on Free/Student).
+    // Container "videos" (anonymous Blob read) under account yushistudiovideos.
+    base: 'https://yushistudiovideos.blob.core.windows.net/videos/',
     baseCN: '',   // later: Aliyun OSS / Tencent COS + ICP, e.g. 'https://cn-videos.yushiwang.studio/'
     useCN: false
   };
