@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <g fill="#111111">
+    <!-- left blade + hooked tail -->
+    <path d="M14 15 H24 L46 41 C49 50 47 60 38 63 L31.5 60.5 C38 58 40 51 37 44 L14 18 Z"/>
+    <!-- top-right triangle (right arm) -->
+    <path d="M38 15 H58 L46 33 Z"/>
+    <!-- foot ball -->
+    <circle cx="29.5" cy="55.5" r="8.5"/>
+  </g>
+</svg>
