@@ -1644,3 +1644,38 @@
   btn.addEventListener('click', e => { e.preventDefault(); zh = !zh; apply(); });
   window.__lang = 'en';
 })();
+
+// ---------- UIUX hero video — hover playback progress bar + click-seek ----------
+(() => {
+  const wrap = document.querySelector('.uiux-hero-img');
+  const bar = document.getElementById('uiux-prog');
+  if (!wrap || !bar) return;
+  const fill = bar.querySelector('i');
+  const vid = wrap.querySelector('video');
+  if (!vid || !fill) return;
+
+  function paint() {
+    const d = vid.duration;
+    if (d && isFinite(d)) fill.style.width = Math.min(100, (vid.currentTime / d) * 100) + '%';
+  }
+  vid.addEventListener('timeupdate', paint);
+  vid.addEventListener('loadedmetadata', paint);
+
+  function seek(e) {
+    const d = vid.duration;
+    if (!d || !isFinite(d)) return;
+    const r = bar.getBoundingClientRect();
+    const ratio = Math.min(1, Math.max(0, (e.clientX - r.left) / r.width));
+    try { vid.currentTime = ratio * d; } catch (err) {}
+    paint();
+  }
+  // keep clicks on the bar from opening the project drawer (data-cursor="video")
+  ['click', 'pointerdown', 'mousedown'].forEach(ev =>
+    bar.addEventListener(ev, e => { e.stopPropagation(); e.preventDefault(); }, true));
+  bar.addEventListener('click', seek);
+
+  let scrubbing = false;
+  bar.addEventListener('pointerdown', e => { scrubbing = true; seek(e); });
+  window.addEventListener('pointermove', e => { if (scrubbing) seek(e); });
+  window.addEventListener('pointerup', () => { scrubbing = false; });
+})();

@@ -1589,7 +1589,20 @@ body.c-open .cursor-ring {
   border-radius: 14px;
 }
 
-/* Big title overlay (top-left of image) */
+/* Hover playback progress bar (bottom of the UIUX hero video) */
+.uiux-prog {
+  position: absolute; left: 12px; right: 12px; bottom: 12px; height: 4px;
+  background: rgba(255,255,255,0.28); border-radius: 999px; overflow: hidden;
+  z-index: 6; cursor: pointer;
+  opacity: 0; transform: translateY(4px);
+  transition: opacity .25s ease, transform .25s ease, height .15s ease;
+}
+.uiux-hero-img:hover .uiux-prog { opacity: 1; transform: none; }
+.uiux-prog:hover { height: 7px; }
+.uiux-prog > i {
+  display: block; height: 100%; width: 0%;
+  background: #f57b42; border-radius: 999px;
+}
 .uiux-hero-title {
   position: absolute; left: 6%; top: 8%;
   z-index: 4;

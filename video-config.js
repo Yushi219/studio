@@ -33,9 +33,13 @@
   // so local development keeps working before the CDN is up.
   const isLocal = /^(localhost|127\.|0\.0\.0\.0|\[::1\]|.*\.local)$/i.test(location.hostname) || location.protocol === 'file:';
   const activeBase = () => isLocal ? '' : ((C.useCN && C.baseCN) ? C.baseCN : C.base);
-  // pull the "assets/….mp4" path out of any local src
+  // pull the "assets/….mp4" path out of any local src.
+  // NOTE: digital-twin clips (assets/dm/*) are tiny and are driven by
+  // assistant.js with rapid src+load()+play(); rewriting them to the CDN
+  // would re-load() and cancel that play(). Keep them strictly same-origin.
   const localPath = s => {
     if (!s) return null;
+    if (/(?:^|\/)assets\/dm\//i.test(String(s))) return null;
     const m = String(s).match(/(?:^|\/)(assets\/[^?#]+\.mp4)(?:[?#]|$)/i);
     return m ? m[1] : (/^assets\/[^?#]+\.mp4$/i.test(s) ? s : null);
   };

@@ -6,6 +6,10 @@
 *.webm
 *.m4v
 *.avi
+# EXCEPTION: the tiny digital-twin clips ship WITH the site (same-origin,
+# not via CDN — see video-config.js) so they must be tracked.
+!assets/dm/
+!assets/dm/*.mp4
 
 # ---- Dev/session artifacts (not part of the site) ----
 screenshots/
@@ -29,3 +33,6 @@ node_modules/
 
 # ---- Local-only secrets (keep API keys out of a public repo) ----
 # assistant-config.js   # <- uncomment & host the key in a serverless proxy if you ever add a real key
+
+.vercel
+.env*.local

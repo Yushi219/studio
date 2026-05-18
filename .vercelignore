@@ -8,12 +8,14 @@
 *.webm
 *.m4v
 *.avi
+# EXCEPTION: tiny digital-twin clips ship same-origin (not via CDN)
+!assets/dm/
+!assets/dm/*.mp4
 
 # build-only / source-only / dev artifacts (huge, not part of the site)
 _video_dist/
 assets/g/
 assets/deck/
-assets/dm/
 _pdftmp/
 uploads/
 screenshots/
