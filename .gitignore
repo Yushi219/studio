@@ -1,0 +1,31 @@
+# ---- Large media: NEVER commit videos to GitHub ----
+# (GitHub blocks files >100MB; Pages caps the site ~1GB / 100GB-mo bandwidth)
+# Videos are served from object storage + CDN — see video-config.js
+*.mp4
+*.mov
+*.webm
+*.m4v
+*.avi
+
+# ---- Dev/session artifacts (not part of the site) ----
+screenshots/
+uploads/
+_pdftmp/
+assets/deck/
+# assets/g = raw 4K gallery PNGs (12–24MB each), no longer rendered
+# (the site now uses the optimized assets/s set) — kept locally, off Git
+assets/g/
+
+# ---- OS / editor / temp junk ----
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.tmp.*
+*~
+.idea/
+.vscode/
+node_modules/
+
+# ---- Local-only secrets (keep API keys out of a public repo) ----
+# assistant-config.js   # <- uncomment & host the key in a serverless proxy if you ever add a real key
