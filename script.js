@@ -1189,6 +1189,24 @@
         meta: 'Figma · Adobe Creative Cloud · InDesign · Claude Design',
         nameZh: '设计' },
     ],
+    skill: [
+      { key: '', name: 'User <em>Research</em>',
+        meta: 'Interviews · Contextual Inquiry · Ethnographic Observation · Workflow Analysis · Qual + Quant Methods · Personas',
+        nameZh: '用户<em>研究</em>',
+        metaZh: '用户访谈 · 情境调查 · 民族志观察 · 工作流分析 · 定性 + 定量方法 · 用户画像' },
+      { key: '', name: 'Experience <em>Design</em>',
+        meta: 'Interaction Design · Interactive Prototyping · Usability Testing · Wireframing · Design Thinking · Data-Driven Design',
+        nameZh: '体验<em>设计</em>',
+        metaZh: '交互设计 · 交互原型 · 可用性测试 · 线框图 · 设计思维 · 数据驱动设计' },
+      { key: '', name: 'Delivery &amp; <em>Process</em>',
+        meta: 'Concept to Implementation · Agile for UX · Complex Problem-Solving · Rapid Prototyping (vibe coding)',
+        nameZh: '交付与<em>流程</em>',
+        metaZh: '从概念到落地 · 面向 UX 的敏捷 · 复杂问题解决 · 快速原型 (vibe coding)' },
+      { key: '', name: 'Collaboration &amp; <em>Influence</em>',
+        meta: 'Cross-functional Collaboration · Stakeholder Management · Design Communication · Influencing at All Levels',
+        nameZh: '协作与<em>影响</em>',
+        metaZh: '跨职能协作 · 干系人管理 · 设计沟通 · 影响各层级决策' },
+    ],
   };
   const zh = () => window.__lang === 'zh';
   const pick = (d, f) => (zh() && d[f + 'Zh'] != null) ? d[f + 'Zh'] : d[f];
@@ -1197,7 +1215,7 @@
   function setCategory(cat) {
     currentCat = cat;
     const set = data[cat] || data.work;
-    stage.classList.toggle('cat-skills', cat === 'skills');
+    stage.classList.toggle('cat-skills', cat === 'skills' || cat === 'skill');
     for (let i = 0; i < 4; i++) {
       const tag = stage.querySelector('.ab2-tag[data-tag="' + i + '"]');
       const anc = stage.querySelector('.ab2-anchor[data-anc="' + i + '"]');

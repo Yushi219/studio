@@ -69,6 +69,7 @@
       ],
       sk_h: 'Skills & Certificate',
       sk: [
+        { b: 'Skills', t: 'User Research · Interaction Design · Interactive Prototyping · Workflow Analysis · Data-Driven Design · Cross-functional Collaboration · Generative AI' },
         { b: 'Design', t: 'Figma · Adobe Creative Cloud · InDesign · Claude Design' },
         { b: 'Computational Design', t: 'Rhino · Grasshopper · Revit · Dynamo · Rhino.Inside' },
         { b: 'Development', t: 'JavaScript · HTML/CSS · Node.js · React · Python · GitHub · Azure · Unity · C# · iOS ARKit · Normcore · MySQL · Power BI · Tableau · D3 · Power Automate' },
@@ -135,6 +136,7 @@
       ],
       sk_h: '技能与证书',
       sk: [
+        { b: '技能', t: '用户研究 · 交互设计 · 交互原型 · 工作流分析 · 数据驱动设计 · 跨职能协作 · 生成式 AI' },
         { b: '设计', t: 'Figma · Adobe Creative Cloud · InDesign · Claude Design' },
         { b: '计算性设计', t: 'Rhino · Grasshopper · Revit · Dynamo · Rhino.Inside' },
         { b: '开发', t: 'JavaScript · HTML/CSS · Node.js · React · Python · GitHub · Azure · Unity · C# · iOS ARKit · Normcore · MySQL · Power BI · Tableau · D3 · Power Automate' },
