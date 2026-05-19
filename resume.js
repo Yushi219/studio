@@ -32,7 +32,7 @@
           { b: 'Impact', t: 'Saved $112,000 across seven mockup rooms at Dana-Farber Cancer Institute and cut medical-gas change orders 60% by catching clearance and workflow conflicts before ground-breaking, compressing the cross-disciplinary feedback cycle from weeks to days. Adopted on White Plains Hospital and Dana-Farber; the Chief of Surgery at White Plains called it the most significant advancement in surgical facility design they had seen, and it drew a strong response at a national healthcare design conference.' } ] },
         { name: 'Floorcast', sub: 'Experience Design · AI Building-Use Simulation', date: 'Feb 2026 — Present', li: [
           { b: 'Role', t: 'Predicts how a building will really be used before it is built: AI agents play each clinical role to reproduce real routes and workflows and expose how a layout performs.' },
-          { b: 'Build', t: 'Movement, comfort and acoustic heatmaps with live data give the quantitative picture; an AI interview system adds the qualitative why. Built on a Dana-Farber model that turns staffing and occupancy data into generative layouts, with one-click 2D-to-3D in progress.' },
+          { b: 'Build', t: 'Movement, comfort and acoustic heatmaps with live data give the quantitative picture; an AI interview system adds the qualitative why. Extending from one-click 2D-to-3D to a collaborative Revit and Rhino plugin that runs simulation inside the design workflow, toward an AI-agent, data-driven platform that predicts how a building will perform before it is built.' },
           { b: 'Impact', t: 'Analyzed nurse call-response and rounding times and routes to test nurse-station placement, then re-strategized the wall and double-door positions of the equipment and medication rooms to shorten clinical circulation paths.' } ] },
         { name: 'PAYETTE Places', sub: 'Experience Design · Interactive Web', date: 'Mar — Jun 2025', li: [
           { b: 'Role', t: 'Designed the navigation and wayfinding experience for the firm public project tour at the 2025 AIA Conference, a design-communication artifact serving a broad external audience of architects, clients and press across eight built Boston projects.' },
@@ -98,7 +98,7 @@
           { b: '量化成果', t: '在 Dana-Farber 七间样板间累计节省 11.2 万美元，提前发现净距与流程冲突使医疗气体管线变更单减少 60%，跨专业反馈周期从数周压缩到数天。已应用于 White Plains Hospital 与 Dana-Farber；White Plains 外科主任称其为他所见过手术空间设计领域最重大的进步，并在全国医疗设计大会上引发热烈反响。' } ] },
         { name: 'Floorcast', sub: '体验设计 · AI 建筑使用仿真', date: '2026 年 2 月 — 至今', li: [
           { b: '项目职责', t: '在建造前就预测人如何真实使用建筑的仿真系统。以角色画像驱动 AI 智能体，高度还原不同临床与职业用户的动线与工作流，提前暴露布局的真实表现。' },
-          { b: '核心技术', t: '定量侧输出动线、视觉、光学舒适度与声学等热力图并附实时数据，定性侧由 AI 访谈系统探究空间决策如何改变行为与空间使用。脱胎于 Dana-Farber 将人员配置与房间占用数据并入生成式布局引擎的实践，当前正扩展一键 2D 转 3D。' },
+          { b: '核心技术', t: '定量侧输出动线、舒适度与声学等热力图并附实时数据，定性侧由 AI 访谈系统补足原因。当前从一键 2D 转 3D，进一步开发可直接在 Revit / Rhino 内运行的协同插件，让仿真融入设计流程；目标是打造 AI 智能体与数据驱动、能在建成前预测建筑表现的仿真平台。' },
           { b: '量化成果', t: '结合护士完成病人呼叫与巡访的时间和路线，评估护士站位置的便利性；并通过优化医疗器械房与药品房的墙体及双门位置策略，成功缩短临床工作动线。' } ] },
         { name: 'PAYETTE Places', sub: '体验设计 · 交互式网页', date: '2025 年 3 — 6 月', li: [
           { b: '项目职责', t: '为 2025 年 AIA 大会设计公司对外项目导览的导航与寻路体验，面向建筑师、客户与媒体等广泛外部受众的设计传达制品，串联波士顿八个建成项目。' },
