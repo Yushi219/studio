@@ -13,58 +13,54 @@
   const D = {
     en: {
       name: 'YUSHI WANG',
-      title: 'Design Technologist · Experience Designer&nbsp;&nbsp;—&nbsp;&nbsp;AEC · AIGC · Full-Stack',
+      title: 'Experience Designer · Design Technologist&nbsp;&nbsp;—&nbsp;&nbsp;AEC · BIM · AI · Full-Stack',
       contact: 'yushiw620@gmail.com&nbsp;&nbsp;·&nbsp;&nbsp;Boston, MA <b>(+1) 213-706-9087</b>&nbsp;&nbsp;·&nbsp;&nbsp;Shanghai <b>(+86) 139-1616-4162</b>',
       photo: false,
       sums_h: 'Profile',
       sums: [
-        { b: 'Background', t: 'Cross-disciplinary background in Building Science + Computer Science, with 4+ years at a global AEC design firm owning the full lifecycle of AI tools and web platforms — turning AIGC, multimodal interaction and complex AEC / BIM workflows into high-experience digital products.' },
-        { b: 'Experience Design', t: 'Lead end-to-end UX — user research, interaction design, interactive prototyping and usability iteration — for technical tools used by 100+ architects, engineers and BIM teams; data-driven design refined through Google Analytics behavioral data and qualitative user feedback.' },
-        { b: 'Impact', t: 'Incubated multiple 0→1 products; a sustainability platform won the AIA TAP Innovation Award and reached users in 85+ countries; an AI generation platform lifted design efficiency ~70% and saved $50,000+ in outsourcing cost.' },
-        { b: 'Collaboration', t: 'As lead of the AI research group and the digital-technology community, drive cross-functional, globally distributed collaboration — building training systems and technical documentation that systematically raise an organization’s digital and AI capability.' },
-        { b: 'Profile', t: 'Goal-oriented; quick to read the critical node of a problem, spot workflow bottlenecks and user pain points, and drive a technical breakthrough; strong product sense, communication and fast-learning ability.' }
+        { b: 'Background', t: 'Sole design technologist at a 200-person global AEC firm. Partners directly with the Principals who lead the Building Science, Space Strategy and Healthcare practices, turning the needs of each discipline into the right tool, and works the day-to-day details with the designers and Senior Associates who use it. Owns the full path: research, interaction design, testing and detail work, design specs, release, then usage tracking and internal rollout. Effectively a one-person product company serving the whole firm.' },
+        { b: 'Experience Design', t: 'Runs the full design arc for technical AEC and BIM tools. Turns user research, including interviews, workflow analysis and qualitative and quantitative methods, into concrete product improvements. Designs and weighs several options, prototypes from low to high fidelity, and validates each with real users and the engineers who build it. Usability testing and behavioral data decide what ships, with the chosen design carried through to working software, build issues included.' },
+        { b: 'Impact', t: 'More than a decade in the Autodesk AEC stack across Revit, AutoCAD and Dynamo, with a working knowledge of the BIM workflows the industry actually runs on. That fluency turned into products: a sustainability platform that won the AIA TAP Innovation Award and reached users in 85+ countries, and an AI rendering pipeline that sped up image output ~70% and cut $50,000+ of outsourcing.' },
+        { b: 'Enablement', t: 'Founded and led an internal AI research group and a 100+ member Computational Design Community. The work grew from one-off scripts and tools into structured teaching, then into AI tools that capture institutional knowledge and put it back to work across AIGC, parametric design and marketing. Every request is treated as a product question: the smallest set of features that helps the most people, wired into a loop that keeps improving and steadily lifts firm-wide digital maturity.' },
+        { b: 'Profile', t: 'Goal-oriented and detail-minded. Cuts quickly to the core of a messy problem, names the real bottleneck and user pain, and pushes the fix to a shipped release. Leverages vibe coding to turn new requirements and ideas into validated prototypes within days, sharply compressing the concept-to-build cycle. Communicates clearly in writing, in person and in visuals, works in fluent English, and picks up new tools and domains fast.' }
       ],
       prj_h: 'Selected Projects',
       prj: [
-        { name: 'Floorcast', sub: 'Experience Design · AI Spatial Simulation', date: '2025', li: [
-          { b: 'Role', t: 'Designed an agent-based spatial-simulation platform that evaluates how people actually experience and use a building over time — translating role schedules, behavior and spatial memory into qualitative, human-level UX insight for early-stage design decisions.' },
-          { b: 'Core', t: 'Per-agent behavioral parameters (focus, sociability, exploration, route variation) and a spatial-memory layer; AI agent interviews surface routines, frictions and perceived experience.' },
-          { b: 'Impact', t: 'Turns raw simulation into qualitative feedback for scenario comparison and data-driven layout decisions.' } ] },
-        { name: 'Promptitect', sub: 'Product & Experience Design · AI Prompt Engine', date: '2025', li: [
-          { b: 'Role', t: 'Designed a closed-loop prompt-intelligence system that turns scattered, one-off AI experiments into a searchable, reusable, self-improving firm knowledge base.' },
-          { b: 'Core', t: 'Knowledge Gallery, RAG case retrieval with match scores, an AI prompt builder, and a node-based generation board for model comparison.' },
-          { b: 'Impact', t: 'Converts individual trial-and-error into shared, accumulating institutional knowledge.' } ] },
-        { name: 'AI Video Generator', sub: 'Full-Stack & System Architecture · AIGC', date: '2025 — Present', li: [
-          { b: 'Role', t: 'Led 0→1 design and development of an AI video platform, integrating Sora / Kling-class multimodal APIs into one end-to-end workflow.' },
-          { b: 'Core', t: 'Internal storyboard tool with keyframe parsing, shot-intent recognition and cinematic-language optimization; customizable style and pacing per shot.' },
-          { b: 'Impact', t: 'Cut architectural scheme-video production time ~60%; deployed on 3 university-lab projects for one-click presentation.' } ] },
-        { name: 'Ask Tom', sub: 'Data & Front-End · Enterprise RAG', date: '2024 — Present', li: [
-          { b: 'Role', t: 'Built an enterprise Retrieval-Augmented Generation platform with hybrid retrieval (semantic vectors + keyword + category filters) for the marketing and proposal teams.' },
-          { b: 'Core', t: 'Source-grounded answers with page-level citations and in-app PDF preview; SQL Agent integration, feedback loop and regeneration.' },
-          { b: 'Impact', t: 'Core infrastructure for the firm’s RFP / proposal intelligence transformation — verifiable, proposal-ready answers in the firm voice.' } ] },
-        { name: 'PAYETTE Places', sub: 'UI/UX & Full-Stack · Digital Brand Portal', date: '2024 — 2025', li: [
-          { b: 'Role', t: 'Designed and built the firm’s public digital brand portal and interactive project tour for the 2025 AIA Conference — the company’s digital business card.' },
-          { b: 'Core', t: 'React / Node.js; interactive map, AR display and dynamic data visualization; responsive web & mobile; QR business-card lead-in with Google Maps wayfinding.' },
-          { b: 'Impact', t: '~300 visitors in a single open-day; amplified via official blog & Instagram; became the firm’s technical brand benchmark.' } ] }
+        { name: 'Interactive Virtual Mockup (IVM)', sub: 'Experience Design · Immersive VR / AR', date: '2024 — 2025', li: [
+          { b: 'Role', t: 'Physical healthcare mockups cost $12,000–$18,000 per room and cannot show movement, workflow or fast iteration. Built a multi-user VR tool where surgeons, nurses, infection-control staff and architects walk a clinical room before construction, operate real equipment, switch design options, and give structured feedback while their real workflows are observed in context.' },
+          { b: 'Build', t: 'Pipeline from Rhino and Revit into Unity and onto Meta Quest, shipped over three releases: an interactive base environment with screenshot and voice annotation, then higher-fidelity lighting with button-driven equipment controls, then synchronized multiplayer review of complex multi-layer ceilings. An AR track places full-scale options on the real site and swaps components on physical models.' },
+          { b: 'Impact', t: 'Saved $112,000 across seven mockup rooms at Dana-Farber Cancer Institute and cut medical-gas change orders 60% by catching clearance and workflow conflicts before ground-breaking, compressing the cross-disciplinary feedback cycle from weeks to days. Adopted on White Plains Hospital and Dana-Farber; the Chief of Surgery at White Plains called it the most significant advancement in surgical facility design they had seen, and it drew a strong response at a national healthcare design conference.' } ] },
+        { name: 'Floorcast', sub: 'Experience Design · AI Building-Use Simulation', date: 'Feb 2026 — Present', li: [
+          { b: 'Role', t: 'Predicts how a building will really be used before it is built: AI agents play each clinical role to reproduce real routes and workflows and expose how a layout performs.' },
+          { b: 'Build', t: 'Movement, comfort and acoustic heatmaps with live data give the quantitative picture; an AI interview system adds the qualitative why. Built on a Dana-Farber model that turns staffing and occupancy data into generative layouts, with one-click 2D-to-3D in progress.' },
+          { b: 'Impact', t: 'Analyzed nurse call-response and rounding times and routes to test nurse-station placement, then re-strategized the wall and double-door positions of the equipment and medication rooms to shorten clinical circulation paths.' } ] },
+        { name: 'PAYETTE Places', sub: 'Experience Design · Interactive Web', date: 'Mar — Jun 2025', li: [
+          { b: 'Role', t: 'Designed the navigation and wayfinding experience for the firm public project tour at the 2025 AIA Conference, a design-communication artifact serving a broad external audience of architects, clients and press across eight built Boston projects.' },
+          { b: 'Build', t: 'Information architecture spanning an interactive city map with one-tap Google Maps routing, building hotspots that open detailed project pages, a navigable gallery with info panels, and animated facade diagrams with walking figures and interactive envelope details; fully responsive, with the site QR printed on company business cards.' },
+          { b: 'Impact', t: 'Became the public-facing showcase for AIA 2025 and a benchmark for how the office presents its work, with roughly 300 visitors on a single open day.' } ] },
+        { name: 'Promptitect', sub: 'Product & Experience Design · AI Prompt Intelligence', date: 'Sep 2025 — Present', li: [
+          { b: 'Role', t: 'An AI prompt-intelligence layer embedded in the design process that turns scattered, one-off AI experiments into a shared, continuously improving capability.' },
+          { b: 'Build', t: 'A searchable knowledge gallery, RAG case retrieval with match scores, a guided prompt builder, and a node-based board for comparing model outputs. Shaped by how designers actually work, it is tuned so someone with no AI background gets reliable results in fewer steps, with design copyright and IP compliance built into the workflow.' },
+          { b: 'Impact', t: 'Standardized prompt quality across AIGC, parametric design and marketing, raised output consistency, and protected design copyright while lowering the barrier for everyday designers.' } ] }
       ],
       exp_h: 'Professional Experience',
       exp: [
-        { name: 'PAYETTE', at: 'Boston, MA', sub: 'Design Technologist · cross-team tools, AI research & digital enablement', date: 'June 2022 — Present', li: [
-          { b: 'Scope', t: 'Embedded with three groups — Building Science, Space Strategy and Design Visualization — owning research → UX → interaction design → full-stack development → Azure deployment for 10+ tools (web apps, Rhino / Grasshopper & Dynamo plugins, AR/VR); 50–80% workflow efficiency gains.' },
-          { b: 'Building Science', t: 'Parametric façade & massing, sun-path / daylight and performance-informed tools; reusable Rhino.Inside & Grasshopper-SDK components, plus Solar Comfort (JS + Python, global weather data, real-time comfort heatmaps).' },
-          { b: 'Space Strategy', t: 'DWG→web space-programming platforms (Floorish, Sectioneer, MassIt) and Speckle → Power BI / Tableau / D3 dashboards (occupancy heatmaps, chord diagrams) with an interactive client-feedback tool — data-driven planning & client engagement.' },
-          { b: 'Design Viz & Immersive', t: 'Kaleidoscope embodied-carbon platform (React; AIA TAP Innovation Award, 85+ countries), the PAYETTE Places digital brand portal (React / Node, interactive map, AR, responsive) for AIA 2025, plus multi-user healthcare VR mockups (Unity / C# / Meta Quest / Normcore) and iPad on-site / on-model AR (iOS ARKit).' },
-          { b: 'AI Research Lead', t: 'Founded & led the firm’s AI research group: from the early Stable Diffusion era (17 ComfyUI image-to-image scripts, 25+ company-style LoRA models trained via Kohya) to the GPT-Image / Nano-Banana era (prompt-engineering playbooks, cross-project testing), building the Promptitect closed-loop prompt-intelligence ecosystem; AI pipeline lifted design efficiency ~70% and saved $50,000+ outsourcing across 5 projects incl. Yale lab.' },
-          { b: 'Digital Enablement', t: 'Founded & led the Computational Design Community (100+ designers): a searchable, version-controlled script library, Grasshopper online courses, a continuous video-tutorial series, monthly leadership reports and the annual AI showcase.' } ] },
+        { name: 'PAYETTE', at: 'Boston, MA', sub: 'Design Technologist', date: 'June 2022 — Present', li: [
+          { b: 'Validation & Feedback', t: 'Built the client-feedback loop that optimizes the design process before construction: Pulse, a web tool that collects structured feedback on 2D plans and digital spatial-design options, and immersive AR/VR review in Unity, C# and iOS ARKit that lets clinical, engineering and architecture teams validate space and equipment decisions on site.' },
+          { b: 'User Research & Experience', t: 'Own user research and interaction design for the firm internal tools serving 200+ architects, engineers and BIM staff: space-strategy tools (Floorish, Sectioneer, Floorcast), sustainability tools (Kaleidoscope, an embodied-carbon platform that won the AIA TAP Award and reached 85+ countries; Solar Comfort) and the IVM healthcare VR review tool ($112K mockup savings, change orders down 60%). Conduct interviews, workflow analysis and contextual observation, build low- to high-fidelity prototypes, and lead usability testing to validate current and future features.' },
+          { b: 'Computational Design', t: 'Build professional AEC tooling hands-on: 30+ Grasshopper and Dynamo scripts, a .NET Revit add-in that installs a company plugin ribbon of in-house tools across the office, plus Python Rhino plugins and generative design; consolidated into the firm parametric script library and digital training system, with regular digital and AI lectures that brought 100+ designers to frontier practice.' },
+          { b: 'Applied AI', t: 'Drove applied AI end to end: led the AI research group that tuned image-to-image generation into a faster rendering pipeline (~70% efficiency, $50K+ outsourcing saved), built a prompt-intelligence tool that makes reliable image generation easy for any designer and an AI video tool that turned competitive project-bid pitches from static decks into dynamic visual storytelling, and now use vibe coding to stand up MVP demos in days plus AI agents, LLMs and RAG to ship internal web tools that streamline the design workflow.' },
+          { b: 'Full-Stack Delivery', t: 'Take 10+ tools from concept to production largely single-handed: meet regularly with the three practice Principals and each project-group PM to surface needs and pain points and turn them into solutions, build front and back end, deploy on Azure with versioned releases, and partner with engineering to land design specs and resolve implementation issues, lifting target workflows 50 to 80 percent. Partnering with the marketing and finance teams, also built the Ask Tom RAG agent and Payette Lens, an AI financial-data visualization tool.' },
+          { b: 'Leadership & Management', t: 'Founded and lead the firm AI research group and a 100+ member design-tech community: set multi-year tooling and AI strategy, build training, onboarding and version-controlled knowledge systems, govern design and IP standards, mentor designers across offices, report monthly to firm Principals and leadership, and drive cross-functional, globally distributed collaboration that influences decisions at every level.' } ] },
         { name: 'Dowbuilt', at: 'Seattle, WA', sub: 'Digital Construction Project Engineer', date: 'Dec 2021 — June 2022', li: [
-          { b: 'BIM Automation', t: 'Built a Python / Revit BIM-modeling & automated quantity-take-off system; parametric modules turn a model into a one-click material list & cost estimate — take-off efficiency +90% (days → minutes), reduced human error and real-time cost data for 10+ high-end residential projects.' },
-          { b: 'Pre-construction & Field', t: 'Grasshopper / Dynamo / Python for excavation modeling, 4D schedule visualization, clash detection and CNC-ready fabrication; maintained shared GitHub script libraries; weekly coordination with PMs, superintendents and fabricators.' } ] }
+          { b: 'BIM Automation', t: 'Built a Python/Revit BIM modeling and automated quantity-take-off system; one-click material lists and cost estimates cut take-off from days to minutes (about 90% faster), with real-time cost data across 10+ high-end residential projects.' },
+          { b: 'Pre-construction & Field', t: 'Delivered Grasshopper/Dynamo/Python tooling for excavation modeling, 4D scheduling, clash detection and CNC-ready fabrication; coordinated weekly with PMs, superintendents and fabricators.' } ] }
       ],
       int_h: 'Internship',
       int: [
         { name: 'NBBJ', at: 'Seattle, WA', sub: 'Digital Design Specialist Intern', date: 'July — Sept 2021', li: [
-          { b: 'UI/UX', t: 'Led a full UI/UX redesign of the firm’s digital-technology platform — an enterprise resource portal unifying tool search and technical-asset management — improving usability and cross-office collaboration.' },
-          { b: 'Parametric R&D', t: 'Built parametric tools in Grasshopper / Dynamo (customizable brick-porosity script, solar-tracking façade generator, automated daylight-simulation tool); supported pilot projects and QA/QC adoption.' } ] }
+          { b: 'UI/UX', t: 'Led a full UI/UX redesign of the firm enterprise digital-technology platform (unified tool search and technical-asset management), improving usability and cross-office collaboration.' },
+          { b: 'Parametric R&D', t: 'Built parametric Grasshopper/Dynamo tools (brick-porosity, solar-tracking façade, automated daylight simulation) adopted in pilot projects and QA/QC.' } ] }
       ],
       edu_h: 'Education',
       edu: [
@@ -73,69 +69,64 @@
       ],
       sk_h: 'Skills & Certificate',
       sk: [
-        { b: 'Experience & Research', t: 'User research (quantitative + qualitative) · Interaction design · Interactive prototyping · Usability testing · Data-driven design (Google Analytics) · Workflow analysis' },
-        { b: 'Design', t: 'Figma · Adobe Creative Cloud · InDesign' },
-        { b: 'Computational Design', t: 'Rhino · Grasshopper · Revit · Dynamo · Rhino.Inside · Power BI · Tableau · D3' },
-        { b: 'Development', t: 'JavaScript · React · Node.js · Python · HTML/CSS · GitHub · Azure · Unity · C# · iOS ARKit' },
-        { b: 'AI', t: 'Stable Diffusion (ComfyUI · Fooocus · Forge) · Kohya / LoRA · Runway · Krea · Rhino MCP w/ Claude · RAG' },
+        { b: 'Design', t: 'Figma · Adobe Creative Cloud · InDesign · Claude Design' },
+        { b: 'Computational Design', t: 'Rhino · Grasshopper · Revit · Dynamo · Rhino.Inside' },
+        { b: 'Development', t: 'JavaScript · HTML/CSS · Node.js · React · Python · GitHub · Azure · Unity · C# · iOS ARKit · Normcore · MySQL · Power BI · Tableau · D3 · Power Automate' },
+        { b: 'AI', t: 'Claude Code · Codex · Gemini · ComfyUI · xfigura · Krea · Runway · Kohya · RAG' },
         { b: 'Certificate', t: 'LEED AP (USGBC, 2021)' },
         { b: 'Awards', t: '2022 ARCHITECT R+D Award & AIA TAP Innovation Award (Kaleidoscope) · IESLA Russell Cole Memorial Design Competition — Special Recognition, Advanced (2020)' }
       ]
     },
     zh: {
       name: '王雨施 <span style="opacity:.45;font-size:.62em;letter-spacing:.04em">Yushi Wang</span>',
-      title: '设计技术专家 · 体验设计师&nbsp;&nbsp;—&nbsp;&nbsp;建筑科技 · AIGC · 全栈',
+      title: '体验设计师 · 设计技术专家&nbsp;&nbsp;—&nbsp;&nbsp;建筑科技 · BIM · AI · 全栈',
       contact: 'yushiw620@gmail.com&nbsp;&nbsp;·&nbsp;&nbsp;上海&nbsp;·&nbsp;<b>(+86) 139-1616-4162</b>',
       photo: true,
       sums_h: '个人优势',
       sums: [
-        { b: '工作背景', t: '具备建筑科学与计算机科学的交叉学科背景，及 4 年海外设计公司负责 AI 工具与 Web 平台全流程开发的经验，专注于将 AIGC、多模态交互与复杂建筑 / BIM 工作流转化为高用户体验的数字产品。' },
-        { b: '体验设计', t: '主导工具型产品的端到端 UX——用户研究、交互设计、交互原型与可用性迭代，服务 100+ 建筑师、工程师与 BIM 团队；以 Google Analytics 行为数据与定性用户反馈驱动数据化设计。' },
-        { b: '以往成就', t: '主导多个从 0 到 1 的 Web 应用孵化，其中可持续设计平台荣获 AIA TAP 创新奖并服务全球超 85 国用户；构建的 AI 生成平台提升设计效率约 70% 并节约外包成本超 5 万美元。' },
-        { b: '团队赋能', t: '作为 AI 研究小组与数字技术社团总负责人，推动跨职能、全球分布式协作，建立培训体系、沉淀技术文档，系统性提升组织的数字化与 AI 能力。' },
-        { b: '综合素养', t: '目标导向型，善于把握事物关键节点，洞察流程瓶颈与用户痛点并驱动技术破局；具备出色的产品思维、沟通协调与快速学习能力。' }
+        { b: '工作背景', t: '约 200 人规模的全球 AEC 设计公司里唯一的设计技术专家。向上直接对接建筑科学、空间策略、医疗三大业务线的 Principal 负责人，把各专业的真实诉求落成真正解决问题的工具；向下与一线设计师、Senior Associate 一起打磨落地细节。用户研究、交互设计、反复测试、设计规范、上线发布、数据追踪到内部推广全流程一手闭环，相当于在公司内部独立运营一支产品团队。' },
+        { b: '体验设计', t: '完整把控技术型 AEC / BIM 工具的体验设计链路。以用户访谈、工作流分析及定性定量研究为起点，把调研洞察转化为明确的产品改进方向；在多个备选方案中权衡取舍，做低保真到高保真原型，并联合真实用户与开发工程师反复验证。最终上线由可用性测试与行为数据说话，选定方案一路跟到软件落地，实现阶段影响设计的问题一并解决。' },
+        { b: '以往成就', t: '深耕 Autodesk 的 AEC 工具十余年，Revit、AutoCAD、Dynamo 信手拈来，熟知行业真正赖以运转的各类 BIM 工作流。这份领域积淀沉淀为实打实的产品：可持续设计平台斩获 AIA TAP 创新奖、覆盖全球 85+ 个国家用户；AI 渲染管线将出图效率提升约 70%，节省外包成本 5 万美元以上。' },
+        { b: '团队赋能', t: '创立并带领公司内部 AI 研究小组，组建起 100+ 人的 Computational Design Community。从早期持续打磨脚本与工具，到体系化教学，再到用 AI 工具把信息与知识沉淀内化，业务半径延伸至 AIGC、参数化设计与 Marketing。始终以产品思维拆解每一个需求：用最精简的一组功能、最高效地惠及最多的人，并嵌入持续迭代的闭环，稳步抬升全公司的数字化水平。' },
+        { b: '综合素养', t: '目标导向，极重细节。能快速切中复杂问题的要害，点破真正的瓶颈与用户痛点，并把方案一路推到上线。善用 vibe coding，数日内即可将新需求与想法转化为可验证的原型，大幅压缩从构想到落地的周期。书面、口头、视觉表达俱清晰，英语流利，新工具新领域上手极快。' }
       ],
       prj_h: '项目经历',
       prj: [
-        { name: 'Floorcast', sub: '体验设计 · AI 空间仿真', date: '2025', li: [
-          { b: '项目职责', t: '设计基于智能体的空间仿真平台，评估人们在长时间内如何真实地体验与使用建筑——将角色日程、行为与空间记忆转化为贴近真人、可指导早期设计决策的定性体验洞察。' },
-          { b: '核心技术', t: '每个智能体含个性参数（专注度、社交性、探索倾向、路径变化）与空间记忆层；AI 智能体访谈呈现其日常、痛点与主观体验。' },
-          { b: '量化成果', t: '将原始仿真转化为可用于方案对比与数据化布局决策的定性反馈。' } ] },
-        { name: 'Promptitect', sub: '产品与体验设计 · AI 提示词引擎', date: '2025', li: [
-          { b: '项目职责', t: '设计闭环式提示词智能系统，把零散、一次性的 AI 实验沉淀为可检索、可复用、能自我进化的公司知识库。' },
-          { b: '核心技术', t: '知识画廊、带匹配度的 RAG 案例检索、AI 提示词构建器与节点式生成板（多模型对比）。' },
-          { b: '量化成果', t: '把提示词工程从个人试错，变为可累积、可共享的组织知识。' } ] },
-        { name: 'AI 视频生成器', sub: '全栈开发与系统架构 · AIGC', date: '2025 — 至今', li: [
-          { b: '项目职责', t: '主导从 0 到 1 设计与开发 AI 视频生成平台，集成 Sora、Kling 等多模态大模型 API，构建端到端工作流。' },
-          { b: '核心技术', t: '内部叙事画板工具，含关键帧智能解析、分镜意图识别与镜头语言优化，支持风格与节奏参数自定义。' },
-          { b: '量化成果', t: '将建筑方案视频制作周期缩短约 60%；应用于 3 个大学实验室项目，实现一键生成。' } ] },
-        { name: 'Ask Tom', sub: '数据与前端开发 · 企业级 RAG', date: '2024 — 至今', li: [
-          { b: '项目职责', t: '构建企业级检索增强生成（RAG）平台，采用语义向量 + 关键词 + 类别筛选的混合检索，服务市场与提案团队。' },
-          { b: '核心技术', t: '可溯源回答，含页级引用与应用内 PDF 预览；SQL Agent 集成、反馈闭环与重生成。' },
-          { b: '量化成果', t: '已成为公司 RFP / 提案智能化转型的核心基础设施——可核验、可直接写进提案、符合公司语气。' } ] },
-        { name: 'PAYETTE Places', sub: 'UI/UX 与全栈 · 数字品牌门户', date: '2024 — 2025', li: [
-          { b: '项目职责', t: '为 2025 全美 AIA 大会设计并开发公司数字品牌门户与交互式项目导览，作为公司的数字名片。' },
-          { b: '核心技术', t: 'React / Node.js；交互式地图、AR 展示与动态数据可视化；Web / 移动端自适应；二维码名片引流与 Google Maps 寻路。' },
-          { b: '量化成果', t: '开放日单日约 300 名访客；通过官方 Blog / Ins 传播，成为公司技术品牌标杆。' } ] }
+        { name: '交互式虚拟样板间 IVM', sub: '体验设计 · 沉浸式 VR / AR', date: '2024 — 2025', li: [
+          { b: '项目职责', t: '实体医疗样板间每间造价 1.2 万至 1.8 万美元，且无法呈现动线、流程与快速迭代。为此打造多人 VR 工具，让外科医生、护士、感控人员与建筑师在建造前就走进临床房间，亲手操作设备、切换方案，并在观察其真实工作流的同时给出结构化反馈。' },
+          { b: '核心技术', t: '从 Rhino、Revit 到 Unity 再到 Meta Quest 的完整管线，分三个版本演进：可截图加语音批注的交互基础环境，更高真实感光照加按键式设备操控，再到可同步多人评审复杂多层吊顶的协作环境；AR 分支支持在真实场地按 1:1 摆放方案、在实体模型上直接切换构件。' },
+          { b: '量化成果', t: '在 Dana-Farber 七间样板间累计节省 11.2 万美元，提前发现净距与流程冲突使医疗气体管线变更单减少 60%，跨专业反馈周期从数周压缩到数天。已应用于 White Plains Hospital 与 Dana-Farber；White Plains 外科主任称其为他所见过手术空间设计领域最重大的进步，并在全国医疗设计大会上引发热烈反响。' } ] },
+        { name: 'Floorcast', sub: '体验设计 · AI 建筑使用仿真', date: '2026 年 2 月 — 至今', li: [
+          { b: '项目职责', t: '在建造前就预测人如何真实使用建筑的仿真系统。以角色画像驱动 AI 智能体，高度还原不同临床与职业用户的动线与工作流，提前暴露布局的真实表现。' },
+          { b: '核心技术', t: '定量侧输出动线、视觉、光学舒适度与声学等热力图并附实时数据，定性侧由 AI 访谈系统探究空间决策如何改变行为与空间使用。脱胎于 Dana-Farber 将人员配置与房间占用数据并入生成式布局引擎的实践，当前正扩展一键 2D 转 3D。' },
+          { b: '量化成果', t: '结合护士完成病人呼叫与巡访的时间和路线，评估护士站位置的便利性；并通过优化医疗器械房与药品房的墙体及双门位置策略，成功缩短临床工作动线。' } ] },
+        { name: 'PAYETTE Places', sub: '体验设计 · 交互式网页', date: '2025 年 3 — 6 月', li: [
+          { b: '项目职责', t: '为 2025 年 AIA 大会设计公司对外项目导览的导航与寻路体验，面向建筑师、客户与媒体等广泛外部受众的设计传达制品，串联波士顿八个建成项目。' },
+          { b: '核心技术', t: '信息架构从交互式城市地图一键唤起 Google Maps 导航，到建筑热点详情页、可翻阅画廊配信息面板，以及含行走人物与可交互围护构造的动态立面图解；全端响应式，网站二维码印于公司名片。' },
+          { b: '量化成果', t: '成为公司在 AIA 2025 的对外门面与作品呈现标杆，开放日单日约 300 人访问。' } ] },
+        { name: 'Promptitect', sub: '产品与体验设计 · AI 提示词智能', date: '2025 年 9 月 — 至今', li: [
+          { b: '项目职责', t: '嵌入设计流程的 AI 提示词智能层，把零散、一次性的 AI 试验沉淀为可共享、持续进化的能力。' },
+          { b: '核心技术', t: '可检索的知识画廊、带匹配度的 RAG 案例检索、引导式提示词构建器，以及对比多模型输出的节点式画板；基于设计师真实使用方式打磨，让零 AI 基础的人也能用更少步骤稳定出图，并在流程中内建设计版权与合规。' },
+          { b: '量化成果', t: '在 AIGC、参数化设计与 Marketing 多线统一提示词质量、提升输出一致性，在降低设计师使用门槛的同时守住公司设计版权。' } ] }
       ],
       exp_h: '工作经历',
       exp: [
-        { name: 'PAYETTE', at: '波士顿', sub: '设计技术专家 · 跨组工具、AI 研究与数字化赋能', date: '2022 年 5 月 — 至今', li: [
-          { b: '业务范围', t: '同时服务建筑科学、空间策略、设计可视化三个组，主导从需求 / 用户研究 → 交互设计 → 全栈开发 → Azure 部署的全流程，交付 Web、Rhino / Grasshopper 与 Dynamo 插件、AR/VR 等 10+ 工具，效能提升 50%–80%。' },
-          { b: '建筑科学', t: '参数化立面与体量、日照 / 采光与性能分析工具；基于 Rhino.Inside 与 Grasshopper SDK 的可复用组件，以及 Solar Comfort（JS + Python，全球气象数据，实时舒适度热力图）。' },
-          { b: '空间策略', t: 'DWG→网页的空间功能配置平台（Floorish、Sectioneer、MassIt），Speckle → Power BI / Tableau / D3 仪表盘（占用热力图、弦图）及交互式客户反馈工具——数据驱动的规划与客户沟通。' },
-          { b: '可视化与沉浸式', t: 'Kaleidoscope 隐含碳平台（React；获 AIA TAP 创新奖，覆盖 85+ 国），2025 AIA 大会的 PAYETTE Places 数字品牌门户（React / Node、交互地图、AR、自适应），以及多人医疗 VR 样板间（Unity / C# / Meta Quest / Normcore）与 iPad 现场 / 实体模型 AR（iOS ARKit）。' },
-          { b: 'AI 研究负责人', t: '创建并带领公司 AI 研究小组：从早期 Stable Diffusion 时代（17 个 ComfyUI 图生图脚本、用 Kohya 训练 25+ 个公司风格 LoRA 模型）到 GPT-Image / Nano-Banana 时代（提示词工程方法、跨项目测试），构建 Promptitect 闭环提示词智能生态；AI 管线提升设计效率约 70%，在含耶鲁实验室的 5 个项目中节省外包成本超 5 万美元。' },
-          { b: '数字化赋能', t: '创建并主导 Computational Design Community（100+ 设计师）：可检索、版本化的脚本库，Grasshopper 在线课程，持续更新的视频教程系列，月度领导汇报与年度 AI 成果展。' } ] },
+        { name: 'PAYETTE', at: '波士顿', sub: '设计技术专家', date: '2022 年 5 月 — 至今', li: [
+          { b: '验证与反馈', t: '在施工前就用客户反馈优化设计流程：Pulse，收集 2D 平面图与数字空间设计效果结构化反馈的网页工具；以及用 Unity、C# 与 iOS ARKit 打造的沉浸式 AR/VR 评审，让临床、工程与建筑团队现场验证空间与设备决策。' },
+          { b: '用户研究与体验', t: '为服务 200+ 建筑师、工程师与 BIM 人员的公司内部工具负责用户研究与交互设计：空间策略类（Floorish、Sectioneer、Floorcast）、可持续类（Kaleidoscope，隐含碳平台，获 AIA TAP 创新奖、覆盖 85+ 国；Solar Comfort）与医疗 VR 评审工具 IVM（样板间省 11.2 万美元、变更单减少 60%）。开展访谈、工作流分析与情境观察，制作低到高保真原型，主导可用性测试验证现有与未来功能。' },
+          { b: '计算性设计', t: '亲手打造专业 AEC 工具：编写 30+ 个 Grasshopper 与 Dynamo 脚本，基于 .NET 开发可全公司安装的公司级 Revit 插件（在 Revit 中提供公司插件面板与多项功能），并用 Python 开发 Rhino 插件、做生成式设计；沉淀为公司参数化脚本库与数字化培训体系，定期开设数字化与 AI 讲座，带动 100+ 设计师掌握前沿。' },
+          { b: 'AI 应用', t: '端到端推动 AI 落地：带 AI 研究组把图生图调成更快的渲染管线（效率约 +70%、省外包 5 万美元以上），做出让任何设计师都能稳定出图的提示词智能工具，以及把项目投标讲故事从静态翻页变为动态视觉叙事的 AI 视频工具；如今用 vibe coding 数日产出 MVP demo，并用 AI Agent、LLM 与 RAG 做内部 web 工具优化设计流程。' },
+          { b: '全栈交付', t: '10+ 工具基本由我一人从概念做到上线：定期与三个组 Principal 及各设计项目组 PM 开会，挖掘需求与痛点并转化为解决方案；前后端开发、Azure 部署与版本化发布，与开发协作落地设计规范、解决影响设计的实现问题，目标工作流提效 50% 到 80%。并与市场与金融团队协作，开发 Ask Tom RAG 智能体与 Payette Lens（AI 金融数据可视化）。' },
+          { b: '领导与管理', t: '创立并带领公司 AI 研究小组与 100+ 人设计技术社区：制定多年工具与 AI 战略，搭建培训、新人 onboarding 与版本化知识体系，管控设计与版权规范，跨办公室带教设计师，每月向公司 Principal 与管理层汇报，并推动跨职能、全球分布式协作，影响各层级决策。' } ] },
         { name: 'Dowbuilt', at: '西雅图', sub: '数字建筑项目工程师', date: '2021 年 12 月 — 2022 年 6 月', li: [
-          { b: 'BIM 自动化', t: '主导基于 Python / Revit 的 BIM 建模与工料自动测算系统；参数化模块将模型一键转化为材料清单与成本预估——测算效率提升超 90%（数日→分钟级），降低人为误差，为 10+ 高端住宅项目提供即时成本数据。' },
-          { b: '施工前期与现场', t: '用 Grasshopper / Dynamo / Python 实现挖掘建模、4D 进度可视化、碰撞检测与 CNC 可交付件；维护共享 GitHub 脚本库；每周与项目经理、现场主管、加工方协调。' } ] }
+          { b: 'BIM 自动化', t: '主导 Python / Revit 的 BIM 建模与工料自动测算系统；一键生成材料清单与成本预估，测算从数日缩短到分钟级（约提速 90%），为 10+ 高端住宅项目提供实时成本数据。' },
+          { b: '施工前期与现场', t: '用 Grasshopper / Dynamo / Python 实现挖掘建模、4D 进度可视化、碰撞检测与 CNC 可交付件；每周与项目经理、现场主管与加工方协调。' } ] }
       ],
       int_h: '实习经历',
       int: [
         { name: 'NBBJ', at: '西雅图', sub: '数字设计专家（实习）', date: '2021 年 7 月 — 9 月', li: [
-          { b: 'UI/UX', t: '主导公司数字技术平台的 UI/UX 全流程重构——打造集工具检索与技术资产管理于一体的企业级资源门户，提升可用性与跨办公室协作。' },
-          { b: '参数化研发', t: '用 Grasshopper / Dynamo 开发参数化工具（砖墙孔隙率定制脚本、太阳追踪幕墙生成器、日光分析自动化工具）；支持试点项目与 QA/QC 推广。' } ] }
+          { b: 'UI/UX', t: '主导公司数字技术平台的 UI/UX 全流程重构（统一工具检索与技术资产管理），提升可用性与跨办公室协作。' },
+          { b: '参数化研发', t: '用 Grasshopper / Dynamo 开发参数化工具（砖墙孔隙率、太阳追踪幕墙、日光分析自动化），在试点项目与 QA/QC 中落地。' } ] }
       ],
       edu_h: '教育经历',
       edu: [
@@ -144,11 +135,10 @@
       ],
       sk_h: '技能与证书',
       sk: [
-        { b: '体验与研究', t: '用户研究（定量 + 定性）· 交互设计 · 交互原型 · 可用性测试 · 数据驱动设计（Google Analytics）· 工作流分析' },
-        { b: '设计', t: 'Figma · Adobe Creative Cloud · InDesign' },
-        { b: '计算性设计', t: 'Rhino · Grasshopper · Revit · Dynamo · Rhino.Inside · Power BI · Tableau · D3' },
-        { b: '开发', t: 'JavaScript · React · Node.js · Python · HTML/CSS · GitHub · Azure · Unity · C# · iOS ARKit' },
-        { b: 'AI', t: 'Stable Diffusion (ComfyUI · Fooocus · Forge) · Kohya / LoRA · Runway · Krea · Rhino MCP with Claude · RAG' },
+        { b: '设计', t: 'Figma · Adobe Creative Cloud · InDesign · Claude Design' },
+        { b: '计算性设计', t: 'Rhino · Grasshopper · Revit · Dynamo · Rhino.Inside' },
+        { b: '开发', t: 'JavaScript · HTML/CSS · Node.js · React · Python · GitHub · Azure · Unity · C# · iOS ARKit · Normcore · MySQL · Power BI · Tableau · D3 · Power Automate' },
+        { b: 'AI', t: 'Claude Code · Codex · Gemini · ComfyUI · xfigura · Krea · Runway · Kohya · RAG' },
         { b: '证书', t: 'LEED AP（USGBC，2021）' },
         { b: '获奖', t: '2022 ARCHITECT R+D 大奖 与 AIA TAP 创新奖（Kaleidoscope）· IESLA Russell Cole 纪念设计竞赛 — 高级组特别表彰（2020）' }
       ]
@@ -164,7 +154,7 @@
 
   /* ----------  STATE  ---------- */
   const defState = () => ({ tpl: 'slate', lang: (window.__lang === 'zh' ? 'zh' : 'en'),
-                            ov: {}, off: {}, fs: {}, savedAt: 0 });
+                            ov: {}, off: {}, fs: {}, zoom: 1, savedAt: 0 });
   let state = defState();
   function loadState() {
     let r = null;
@@ -181,7 +171,7 @@
   function setHist(a) { try { localStorage.setItem(LS_HIST, JSON.stringify(a.slice(0, HIST_MAX))); } catch (e) {} }
 
   /* ----------  DOM REFS  ---------- */
-  let ov, page, stage, hist, fmt, toastEl, built = false;
+  let ov, page, stage, hist, fmt, toastEl, zoomEl, built = false;
   const esc = s => String(s);
 
   /* ----------  RENDER  ---------- */
@@ -272,6 +262,7 @@
 
     applyOverrides();
     applyOffsets();
+    applyZoom();
   }
 
   function itemSection(blk, hRid, hTxt, items, pfx, showAt) {
@@ -315,6 +306,29 @@
     });
   }
 
+  /* ----------  ZOOM (Ctrl + wheel)  ---------- */
+  let zoomT = 0;
+  function clampZoom(z) { return Math.max(0.5, Math.min(2, Math.round(z * 100) / 100)); }
+  function applyZoom() {
+    if (!page) return;
+    const z = state.zoom || 1;
+    page.style.zoom = (z !== 1) ? z : '';
+  }
+  function showZoomBadge() {
+    if (!zoomEl) return;
+    zoomEl.textContent = Math.round((state.zoom || 1) * 100) + '%';
+    zoomEl.classList.add('on');
+    clearTimeout(zoomT);
+    zoomT = setTimeout(() => zoomEl.classList.remove('on'), 1100);
+  }
+  function bumpZoom(dir) {
+    state.zoom = clampZoom((state.zoom || 1) + dir * 0.1);
+    applyZoom(); showZoomBadge(); autoSave();
+  }
+  function resetZoom() {
+    state.zoom = 1; applyZoom(); showZoomBadge(); autoSave();
+  }
+
   /* ----------  BUILD SHELL  ---------- */
   function buildShell() {
     ov = el('div'); ov.id = 'rz-overlay';
@@ -347,12 +361,15 @@
     fmt.innerHTML = '<button data-fz="-1">A−</button><span class="fs-val">·</span>' +
       '<button data-fz="1">A+</button><button data-b="1"><b>B</b></button>';
     toastEl = el('div', 'rz-toast');
+    zoomEl = el('div', 'rz-zoom');
+    zoomEl.title = 'Ctrl + scroll to zoom · click to reset 100%';
 
     ov.appendChild(bar);
     ov.appendChild(stage);
     ov.appendChild(hist);
     ov.appendChild(fmt);
     ov.appendChild(toastEl);
+    ov.appendChild(zoomEl);
     document.body.appendChild(ov);
 
     /* --- wiring --- */
@@ -392,9 +409,20 @@
       const t = e.target.closest('[data-rid]'); if (t) { saveOverride(t); autoSave(); }
     });
 
+    // Ctrl + wheel zoom
+    stage.addEventListener('wheel', e => {
+      if (!e.ctrlKey) return;
+      e.preventDefault();
+      bumpZoom(e.deltaY < 0 ? 1 : -1);
+    }, { passive: false });
+    zoomEl.addEventListener('click', resetZoom);
+
     document.addEventListener('keydown', e => {
       if (!ov.classList.contains('on')) return;
       if (e.key === 'Escape') { if (editing) setEdit(false); else close(); }
+      if (e.ctrlKey && (e.key === '0' || e.code === 'Digit0' || e.code === 'Numpad0')) {
+        e.preventDefault(); resetZoom();
+      }
     });
     document.addEventListener('langchange', () => {
       if (!ov || !ov.classList.contains('on')) return;
@@ -574,13 +602,17 @@
 
   /* ----------  EXPORT  ---------- */
   function exportPDF() {
-    if (editing) setEdit(false);
-    hist.classList.remove('on'); fmt.classList.remove('on');
-    document.documentElement.classList.add('rz-printing');
-    setTimeout(() => {
-      window.print();
-      setTimeout(() => document.documentElement.classList.remove('rz-printing'), 400);
-    }, 60);
+    // Download the pre-rendered, print-formatted PDF (built by the export pipeline)
+    // instead of invoking the browser print dialog.
+    const lang = (state.lang === 'zh') ? 'ZH' : 'EN';
+    const file = 'YushiWang-Resume-' + lang + '.pdf';
+    const a = document.createElement('a');
+    a.href = 'resume/' + file;
+    a.download = file;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    toast(state.lang === 'zh' ? '已下载排版版 PDF ✓' : 'Downloaded formatted PDF ✓');
   }
 
   /* ----------  TOAST  ---------- */
@@ -616,6 +648,12 @@
   function init() {
     const btn = document.getElementById('resume-btn');
     if (btn) btn.addEventListener('click', e => { e.preventDefault(); open(); });
+    const h = (location.hash || '').toLowerCase();
+    if (h.indexOf('resume') >= 0) {
+      if (h.indexOf('zh') >= 0) window.__lang = 'zh';
+      else if (h.indexOf('en') >= 0) window.__lang = 'en';
+      open();
+    }
   }
   if (document.readyState === 'loading')
     document.addEventListener('DOMContentLoaded', init);
