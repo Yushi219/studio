@@ -111,7 +111,7 @@
         { bEN:'Award & Press', bZH:'获奖与报道', sEN:'AIA TAP + ARCHITECT R+D; in Metropolis.', sZH:'获 AIA TAP 与 R+D 奖；登《Metropolis》。' },
         { bEN:'AI Research Lead', bZH:'AI 研究负责人', sEN:'Led the AI group; firm-wide lectures & roadmap.', sZH:'带领 AI 组；全公司讲座与路线图。' },
         { bEN:'Public Recognition', bZH:'公开推荐', sEN:'Solar Comfort recognized by industry leaders.', sZH:'Solar Comfort 获行业领袖推荐。' },
-        { bEN:'GitHub Management', bZH:'GitHub 管理', sEN:'Clean, modular, versioned firm tool repos.', sZH:'整洁、模块化、版本化的工具仓库。' },
+        { bEN:'Women In Design Lecture', bZH:'Women In Design 讲座', sEN:'Healthcare Interactive Virtual Mockup', sZH:'医疗交互式虚拟样板间' },
         { bEN:'Azure Management', bZH:'Azure 管理', sEN:'Hosted internal tools at scale on Azure.', sZH:'在 Azure 上规模化托管内部工具。' },
         { bEN:'Usage Analytics', bZH:'使用分析', sEN:'Tracked tool usage to refine UX.', sZH:'追踪工具使用，持续优化体验。' }
       ] }
