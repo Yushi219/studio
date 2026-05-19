@@ -809,7 +809,7 @@
   const SX = {
     ai1:'pppp', ai2:'pppppppp', ai3:'p', ai4:'p',
     web1:'pppp', web2:'pppp', web3:'pppp', web4:'pppp', web5:'ppp',
-    uiux:'ppppp', arvrar:'pppp', arvrvr:'ppppp',
+    uiux:'ppppp', arvrar:'pppp', arvrvr:'pppppppp',
     dv1:'ppppp', dv2:'p', dv3:'pppp', dv4:'p', dv5:'pp'
   };
   window.__SIMG = SX;
