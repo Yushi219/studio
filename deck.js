@@ -179,7 +179,7 @@
       <div class="dk-cv-mid" data-a="f" style="--d:.08s">${img(C.hero)}</div>
       <div class="dk-cv-ix" data-a style="--d:.16s">${idx}</div>
     </div>
-    <div class="dk-cvfoot" data-a style="--d:.26s">${links}</div>`;
+    <div class="dk-cvfoot" data-a style="--d:.26s"><a class="dk-cvk" href="https://yushiwang.studio" target="_blank" rel="noopener"><span class="k">${bi('Live, interactive portfolio — every video, animation & demo', '在线交互版作品集 · 含全部视频、动效与演示')}</span><span class="v">yushiwang.studio ↗</span></a></div>`;
   }
 
   function projHTML(p, n) {
@@ -377,6 +377,12 @@
   function init() {
     const b = document.getElementById('deck-btn');
     if (b) b.addEventListener('click', e => { e.preventDefault(); open(); });
+    const h = (location.hash || '').toLowerCase();
+    if (h.indexOf('snapshot') >= 0 || h.indexOf('deck') >= 0) {
+      if (h.indexOf('zh') >= 0) window.__lang = 'zh';
+      else if (h.indexOf('en') >= 0) window.__lang = 'en';
+      open();
+    }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();

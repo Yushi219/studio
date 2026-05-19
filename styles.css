@@ -2887,11 +2887,11 @@ body.dk-open .cursor-dot, body.dk-open .cursor-ring { opacity:0 !important; }
 .dk-gal .gh .gs { font-family:var(--mo); font-size:13px; color:var(--dmid); max-width:42ch; text-align:right; }
 .dk-gal .dk-grid { position:absolute; left:74px; right:74px; top:206px; bottom:112px;
   display:grid; align-items:stretch; justify-items:stretch; }
-.dk-gal .dk-grid.r4 { grid-template-columns:repeat(4,minmax(0,1fr)); gap:30px; align-content:center; }
+.dk-gal .dk-grid.r4 { grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; align-content:center; }
 .dk-gal .dk-grid.r9 { grid-template-columns:repeat(3,minmax(0,1fr)); grid-template-rows:repeat(3,1fr); gap:22px 30px; }
 .dk-gc { display:flex; flex-direction:column; gap:10px; min-width:0; min-height:0; overflow:hidden; }
 .dk-gc .gi { flex:1 1 auto; min-height:0; }
-.dk-gal .dk-grid.r4 .dk-gc .gi { flex:none; width:100%; aspect-ratio:16/10; }
+.dk-gal .dk-grid.r4 .dk-gc .gi { flex:none; width:100%; aspect-ratio:5/6; }
 .dk-gc .gx b { display:block; font-family:var(--sf); font-size:20px; color:var(--dink); line-height:1.15; }
 .dk-gc .gx span { display:block; font-family:var(--mo); font-weight:300; font-size:12px;
   line-height:1.45; color:var(--dmid); margin-top:4px; }
