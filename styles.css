@@ -2478,13 +2478,14 @@ body.rz-open .cursor-dot, body.rz-open .cursor-ring { opacity: 0 !important; }
 .rz-btn.rz-primary { background: #f57b42; border-color: #f57b42; color: #fff; }
 .rz-btn.rz-primary:hover { background: #ff8d57; }
 .rz-btn.rz-x { border-radius: 50%; width: 32px; height: 32px; padding: 0; font-size: 14px; }
-.rz-sel {
+.rz-sel, .rz-ver {
   font-family: var(--mono); font-size: 10.5px; letter-spacing: .06em;
   color: #f5f3ee; background: #2a2a2a;
   border: 1px solid rgba(245,243,238,.34); border-radius: 999px;
   padding: 7px 12px; outline: none;
 }
-.rz-sel option { color: #1a1a1a; }
+.rz-ver { border-color: var(--acc, #f57b42); max-width: 160px; }
+.rz-sel option, .rz-ver option { color: #1a1a1a; }
 .rz-divider { width: 1px; height: 22px; background: rgba(245,243,238,.18); }
 
 /* ---- Scroll stage ---- */

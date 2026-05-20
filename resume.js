@@ -219,13 +219,6 @@
     zh: D.zh
   };
 
-  const VARIANTS = ['lean', 'full'];
-  function varLabel() {
-    return state.lang === 'zh'
-      ? (state.variant === 'full' ? '精简版' : '详细版')
-      : (state.variant === 'full' ? 'Lean' : 'Detailed');
-  }
-
   const TPL = [
     { id: 'slate', en: 'Slate', zh: '岩蓝' },
     { id: 'mono',  en: 'Editorial', zh: '极简' },
@@ -235,12 +228,20 @@
 
   /* ----------  STATE  ---------- */
   const defState = () => ({ tpl: 'slate', lang: (window.__lang === 'zh' ? 'zh' : 'en'),
-                            variant: 'lean', ov: {}, off: {}, fs: {}, zoom: 1, savedAt: 0 });
+                            activeVersion: 'General', versions: ['General'],
+                            ov: {}, off: {}, fs: {}, zoom: 1, savedAt: 0 });
   let state = defState();
   function loadState() {
     let r = null;
     try { r = JSON.parse(localStorage.getItem(LS_DOC) || 'null'); } catch (e) {}
     state = (r && typeof r === 'object') ? Object.assign(defState(), r) : defState();
+    if (!Array.isArray(state.versions) || !state.versions.length) state.versions = ['General'];
+    if (!state.activeVersion || state.versions.indexOf(state.activeVersion) < 0) state.activeVersion = state.versions[0];
+    // migrate old lean/full variant overrides into the General version
+    if (state.ov) Object.keys(state.ov).forEach(k => {
+      const m = /^(full|lean)::(.*)$/.exec(k);
+      if (m) { const nk = 'General::' + m[2]; if (state.ov[nk] == null) state.ov[nk] = state.ov[k]; delete state.ov[k]; }
+    });
   }
   let saveT = 0;
   function persist() {
@@ -285,7 +286,7 @@
   }
 
   function render() {
-    const d = (state.variant === 'full' ? DFULL : D)[state.lang];
+    const d = DFULL[state.lang];
     page.setAttribute('data-tpl', previewMode ? 'mono' : state.tpl);
     page.innerHTML = '';
 
@@ -407,7 +408,7 @@
   }
 
   function applyOverrides() {
-    const lp = (state.variant || 'lean') + '::' + state.lang + '::';
+    const lp = (state.activeVersion || 'General') + '::' + state.lang + '::';
     page.querySelectorAll('[data-rid]').forEach(n => {
       const rid = n.getAttribute('data-rid');
       const o = state.ov[lp + rid];
@@ -447,6 +448,25 @@
     state.zoom = 1; applyZoom(); showZoomBadge(); autoSave();
   }
 
+  /* ----------  COMPANY VERSIONS  ---------- */
+  function fillVerSelect(selVer) {
+    if (!selVer) return;
+    selVer.innerHTML = '';
+    (state.versions || ['General']).forEach(v => {
+      const o = el('option'); o.value = v; o.textContent = v; selVer.appendChild(o);
+    });
+    const o2 = el('option'); o2.value = '__new__';
+    o2.textContent = state.lang === 'zh' ? '＋ 另存为公司…' : '＋ Save as company…';
+    selVer.appendChild(o2);
+    selVer.value = state.activeVersion || (state.versions && state.versions[0]) || 'General';
+  }
+  function copyOverrides(from, to) {
+    const fp = from + '::', tp = to + '::';
+    Object.keys(state.ov).forEach(k => {
+      if (k.indexOf(fp) === 0) state.ov[tp + k.slice(fp.length)] = state.ov[k];
+    });
+  }
+
   /* ----------  BUILD SHELL  ---------- */
   function buildShell() {
     ov = el('div'); ov.id = 'rz-overlay';
@@ -462,8 +482,9 @@
     sel.value = state.tpl;
     const bLang = mkBtn(state.lang === 'zh' ? 'EN' : '中文', 'rz-lang');
     const bPrev = mkBtn(state.lang === 'zh' ? '预览' : 'Preview', 'rz-prev');
-    const bVar = mkBtn(varLabel(), 'rz-var');
-    const bExp = mkBtn('Export PDF');
+    const selVer = el('select', 'rz-ver');
+    selVer.title = state.lang === 'zh' ? '公司版本' : 'Company version';
+    fillVerSelect(selVer);
     const bDump = mkBtn(state.lang === 'zh' ? '导出内容' : 'Export Text', 'rz-dump');
     const bSave = mkBtn('Save', 'rz-primary');
     const bHist = mkBtn('History');
@@ -471,7 +492,7 @@
     const bX = mkBtn('✕', 'rz-x');
 
     const div = () => el('span', 'rz-divider');
-    [bEdit, bPrev, div(), sel, bVar, div(), bLang, div(), bExp, bDump, bSave, bHist, bReset, div(), bX]
+    [bEdit, bPrev, div(), sel, selVer, div(), bLang, div(), bDump, bSave, bHist, bReset, div(), bX]
       .forEach(n => bar.appendChild(n));
 
     stage = el('div', 'rz-stage');
@@ -511,30 +532,40 @@
       state.lang = state.lang === 'zh' ? 'en' : 'zh';
       bLang.textContent = state.lang === 'zh' ? 'EN' : '中文';
       bPrev.textContent = state.lang === 'zh' ? '预览' : 'Preview';
-      bVar.textContent = varLabel();
       bDump.textContent = state.lang === 'zh' ? '导出内容' : 'Export Text';
       bReset.textContent = state.lang === 'zh' ? '重置' : 'Reset';
+      selVer.title = state.lang === 'zh' ? '公司版本' : 'Company version';
+      fillVerSelect(selVer);
       TPL.forEach((t, i) => { sel.options[i].textContent = t[state.lang] || t.en; });
       render(); persist();
     });
-    bExp.addEventListener('click', exportPDF);
     bDump.addEventListener('click', dumpContent);
-    bVar.addEventListener('click', () => {
-      state.variant = (state.variant === 'full') ? 'lean' : 'full';
-      bVar.textContent = varLabel();
-      render(); persist();
-      toast(state.lang === 'zh'
-        ? (state.variant === 'full' ? '已切到详细版（删减后点"导出内容"发我）' : '已切到精简版')
-        : (state.variant === 'full' ? 'Detailed version — trim it, then Export Text' : 'Lean version'));
+    selVer.addEventListener('change', () => {
+      if (selVer.value === '__new__') {
+        const name = (window.prompt(state.lang === 'zh' ? '保存为哪个公司的版本？输入公司名：' : 'Save as which company? Enter a name:', '') || '').trim();
+        if (!name) { selVer.value = state.activeVersion; return; }
+        if (state.versions.indexOf(name) < 0) state.versions.push(name);
+        copyOverrides(state.activeVersion, name);
+        state.activeVersion = name;
+        fillVerSelect(selVer); render(); persist();
+        toast(state.lang === 'zh' ? ('已另存为「' + name + '」版本 ✓') : ('Saved as "' + name + '" ✓'));
+      } else {
+        state.activeVersion = selVer.value;
+        fillVerSelect(selVer); render(); persist();
+        toast(state.lang === 'zh' ? ('已切到「' + selVer.value + '」版本') : ('Switched to "' + selVer.value + '"'));
+      }
     });
     bSave.addEventListener('click', saveSnapshot);
     bHist.addEventListener('click', () => { hist.classList.contains('on') ? hist.classList.remove('on') : openHist(); });
     bReset.addEventListener('click', () => {
+      const v = state.activeVersion || 'General';
       const msg = state.lang === 'zh'
-        ? '清除本浏览器里所有手动修改，恢复到代码里保存的版本？\n（已保存进代码的 Profile 和核心技术 Build 都会回来；本地未保存的临时改动会丢失）'
-        : 'Clear all manual edits in this browser and reload the saved code version?';
+        ? ('清除「' + v + '」版本在本浏览器里的所有手动修改，恢复到代码里保存的版本？\n（其他公司版本不受影响）')
+        : ('Clear all manual edits for the "' + v + '" version and reload the saved code version?');
       if (!window.confirm(msg)) return;
-      state.ov = {}; state.off = {}; state.fs = {};
+      const pfx = v + '::';
+      Object.keys(state.ov).forEach(k => { if (k.indexOf(pfx) === 0) delete state.ov[k]; });
+      state.off = {}; state.fs = {};
       render(); persist();
       toast(state.lang === 'zh' ? '已重置为代码保存版 ✓' : 'Reset to saved version ✓');
     });
@@ -615,7 +646,7 @@
 
   function saveOverride(node) {
     const rid = node.getAttribute('data-rid');
-    state.ov[(state.variant || 'lean') + '::' + state.lang + '::' + rid] = node.innerHTML;
+    state.ov[(state.activeVersion || 'General') + '::' + state.lang + '::' + rid] = node.innerHTML;
   }
 
   /* --- font toolbar follow focus --- */
@@ -762,8 +793,7 @@
     sel.value = state.tpl;
     bLang.textContent = state.lang === 'zh' ? 'EN' : '中文';
     TPL.forEach((t, i) => { sel.options[i].textContent = t[state.lang] || t.en; });
-    const bVar = ov.querySelector('.rz-var');
-    if (bVar) bVar.textContent = varLabel();
+    fillVerSelect(ov.querySelector('.rz-ver'));
     const bDump = ov.querySelector('.rz-dump');
     if (bDump) bDump.textContent = state.lang === 'zh' ? '导出内容' : 'Export Text';
     const bReset = ov.querySelector('.rz-reset');
@@ -801,13 +831,13 @@
     page.querySelectorAll('[data-rid]').forEach(n => {
       fields[n.getAttribute('data-rid')] = n.innerHTML.trim();
     });
-    const payload = { variant: state.variant, lang: state.lang, tpl: state.tpl,
+    const payload = { version: state.activeVersion, lang: state.lang, tpl: state.tpl,
                       savedAt: Date.now(), fields: fields };
     const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'resume-content-' + state.variant + '-' + state.lang + '.json';
+    a.download = 'resume-' + (state.activeVersion || 'General').replace(/[^A-Za-z0-9_-]+/g, '-') + '-' + state.lang + '.json';
     document.body.appendChild(a); a.click(); a.remove();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
     toast(state.lang === 'zh' ? '已导出内容 JSON，发我即可生成 PDF ✓' : 'Exported content JSON ✓');
