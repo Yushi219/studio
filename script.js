@@ -213,10 +213,12 @@
       const d = Math.hypot(mx - p.x, my - p.y);
       if (d < RADIUS && !c.dissolved) {
         c.dissolved = true;
+        c.el.style.transition = 'none';   // instant scatter-out
         c.el.style.opacity = '0';
         spawnChar(p);
       } else if (d >= RADIUS + 30 && c.dissolved) {
         c.dissolved = false;
+        c.el.style.transition = 'none';
         c.el.style.opacity = '';
       }
     });
@@ -225,7 +227,14 @@
     mx = -9999; my = -9999;
     windX *= 0.5; windY *= 0.5;
     name.classList.remove('active');
-    chars.forEach(c => { if (c.dissolved) { c.dissolved = false; c.el.style.opacity = ''; } });
+    // Ease the title back in slowly (~2s) instead of snapping back.
+    chars.forEach(c => {
+      if (c.dissolved) {
+        c.dissolved = false;
+        c.el.style.transition = 'opacity 2s ease';
+        c.el.style.opacity = '1';
+      }
+    });
   });
 
   let t = 0;
