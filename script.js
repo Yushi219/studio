@@ -729,7 +729,7 @@
            { h: '核心功能', li: ['客户会议中实时参数化调整剖面。', '按建筑细则自动生成多版本部门布局。', '以拖放堆叠的可视化方式快速决策。'] },
            { h: '成效', li: ['节省约 80% 手动重绘时间。', '一个月内完成开发并部署至 Azure。'] }] },
     uiux: { title: 'PAYETTE Places', tag: 'UI · UX · 2025', titleZh: 'PAYETTE Places', tagZh: 'UI · UX · 2025',
-      m: [{ t: 'v', s: 'assets/uiux-payetteplaces.mp4', rate: 2 },
+      m: [{ t: 'v', s: 'assets/uiux-payetteplaces.mp4', rate: 3 },
           { t: 'i', s: G + 'uiux-i1.png' }, { t: 'i', s: G + 'uiux-i2.jpg' },
           { t: 'i', s: G + 'uiux-i3.png' }, { t: 'i', s: G + 'uiux-i4.png' }],
       d: [{ p: 'A public-facing digital project-tour built for the 2025 AIA Conference — a branded “digital front door” that turns the PAYETTE business card into an interactive guide to its Boston work.' },
@@ -1752,4 +1752,16 @@
   els.forEach(setup);
   // The switcher resets innerHTML to plain text, then fires langchange — re-wrap.
   document.addEventListener('langchange', () => els.forEach(wrap));
+})();
+
+// ---------- Per-video playback rate via data-rate ----------
+(() => {
+  document.querySelectorAll('video[data-rate]').forEach(v => {
+    const r = parseFloat(v.dataset.rate);
+    if (!r || r === 1) return;
+    const setRate = () => { try { v.playbackRate = r; } catch (e) {} };
+    setRate();
+    v.addEventListener('loadedmetadata', setRate);
+    v.addEventListener('play', setRate);
+  });
 })();
