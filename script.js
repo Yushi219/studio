@@ -420,10 +420,10 @@
     let scale, rot;
     if (prog < 0.25) {
       const p = prog / 0.25;
-      scale = 0.3 + p * 0.7;
+      scale = 0.45 + p * 1.05;
       rot = 0;
     } else {
-      scale = 1;
+      scale = 1.5;
       const p = (prog - 0.25) / 0.75;
       rot = -p * 360;
     }
@@ -1010,8 +1010,8 @@
       nameZh: '教学 <em>视频</em>', descZh: '为 15+ 脚本与插件录制项目定制化教学视频，大幅提升数字工具在全公司的采用率。' },
     { name: 'Live <em>courses</em>', desc: 'Organized and taught a Grasshopper training series, upskilling design teams across the company.', urls: [{ label: 'Watch series', href: 'https://www.youtube.com/watch?v=r2j1Fd_j618' }],
       nameZh: '系列 <em>课程</em>', descZh: '策划并执教 Grasshopper 系列培训课程，系统化提升设计团队的计算设计能力。' },
-    { name: 'GitHub <em>mgmt</em>', desc: "Managed the firm's GitHub repos &mdash; clean, modular, version-controlled codebases for multiple internal web tools.", urls: [{ label: 'My GitHub', href: 'https://github.com/Yushi219' }, { label: 'Payette GitHub', href: 'https://github.com/Payette' }],
-      nameZh: 'GitHub <em>管理</em>', descZh: '管理公司 GitHub 仓库——为多个内部网页工具维护干净、模块化、版本可控的代码库。' },
+    { name: 'Women In Design <em>Lecture</em>', desc: 'Gave a Women In Design lecture on the Interactive Virtual Mockup &mdash; the multi-user healthcare VR/AR review tool.', urls: [],
+      nameZh: 'Women In Design <em>讲座</em>', descZh: '在 Women In Design 讲座上分享交互式虚拟样板间——多人医疗 VR/AR 评审工具。' },
     { name: 'Azure <em>mgmt</em>', desc: 'Managed Azure deployments hosting multiple internal web tools at scale, ensuring reliable delivery.', urls: [],
       nameZh: 'Azure <em>管理</em>', descZh: '管理 Azure 部署，规模化托管多个内部网页工具，保障稳定交付。' },
     { name: 'Usage <em>analytics</em>', desc: 'Google Analytics across all tools &mdash; monitored engagement &amp; feature usage for continuous UX tuning.', urls: [],
