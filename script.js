@@ -758,7 +758,7 @@
            { h: '核心功能', li: ['现场模式：在真实施工现场放置等比例设计模型并与环境对比。', '实体模型模式：在实体建筑模型上直接切换构件（扶手类型、墙面材质/颜色）。', '实时切换立面方案、材质与颜色。'] },
            { h: '成效', li: ['在 JHU、White Plains 医院、232 A Street、Hillco 等项目中增强客户参与、加速现场决策。'] }] },
     arvrvr: { title: 'Interactive Virtual Mockup', tag: 'VR · Unity · Meta Quest · 2025', titleZh: '交互式虚拟样板间', tagZh: 'VR · Unity · Meta Quest · 2025',
-      m: [{ t: 'v', s: 'assets/arvr-vr.mp4' }].concat(im('vr', 9)),
+      m: [{ t: 'v', s: 'assets/arvr-vr.mp4', heavy: true }].concat(im('vr', 9)),
       d: [{ p: 'A Unity / Meta Quest VR review platform built as a digital extension of physical healthcare mockups — it does not replace the mockup, it adds the things hard to capture physically: movement, interaction, workflow and fast iteration.' },
           { h: 'Key Features', li: ['Navigate full-scale rooms; operate lights, monitors, injectors, articulated arms and ceiling-mounted equipment.', 'Detect equipment / ceiling-truss / door / workflow conflicts invisible in 2D drawings.', 'Screenshot capture + speech-to-text feedback notes; 1-ft grid for distance awareness.', 'Real-time design-option switching and saving; early multiplayer collaborative review.'] },
           { h: 'Workflow', flow: ['Rhino / Revit model', 'Clean + split components', 'Unity: materials · lighting · scripts', 'Build to Meta Quest', 'Interactive review + feedback'] },
@@ -832,6 +832,9 @@
     const m = PROJ[k].m || [];
     const vids = m.filter(x => x.t === 'v');
     const s = Simg(k);
+    // Use the project's first curated still as the video poster, so the modal
+    // shows an image instantly while the (CDN-hosted) video buffers.
+    if (vids[0] && s[0] && !vids[0].poster) vids[0].poster = s[0].s;
     PROJ[k].m = vids.concat(s.length ? s : m.filter(x => x.t === 'i'));
   });
 
@@ -860,11 +863,20 @@
       let media;
       if (it.t === 'v') {
         media = document.createElement('video');
-        media.src = it.s;
         media.controls = true;
         media.playsInline = true;
-        media.preload = k === 0 ? 'auto' : 'metadata';
-        if (k === 0) { media.autoplay = true; media.muted = true; media.loop = true; }
+        if (it.poster) media.poster = it.poster;   // instant still while the video buffers
+        if (it.heavy) {
+          // Very large clip: don't auto-download it. Show the poster + native
+          // play button; the file is only fetched once the user hits play.
+          media.preload = 'none';
+          media.muted = true; media.loop = true;
+          media.src = it.s;
+        } else {
+          media.src = it.s;
+          media.preload = k === 0 ? 'auto' : 'metadata';
+          if (k === 0) { media.autoplay = true; media.muted = true; media.loop = true; }
+        }
         if (it.rate) {
           const vid = media, setRate = () => { try { vid.playbackRate = it.rate; } catch (e) {} };
           setRate();
@@ -881,7 +893,7 @@
     });
     mediaEl.scrollTop = 0;
     const first = mediaEl.querySelector('video');
-    if (first && first.play) first.play().catch(() => {});
+    if (first && first.autoplay && first.play) first.play().catch(() => {});
   }
 
   function renderBlocks(arr) {
