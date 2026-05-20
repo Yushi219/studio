@@ -177,9 +177,9 @@
           { b: 'Build', t: 'Information architecture spanning an interactive city map with one-tap Google Maps routing, building hotspots that open detailed project pages, a navigable gallery with info panels, and animated facade diagrams with walking figures and interactive envelope details; fully responsive, with the site QR printed on company business cards.' },
           { b: 'Impact', t: 'Became the public-facing showcase for AIA 2025 and a benchmark for how the office presents its work, with roughly 300 visitors/day.' } ] },
         { name: 'Promptitect', sub: 'Product & Experience Design · AI Prompt Intelligence', date: 'Sep 2025 — Present', li: [
-          { b: 'Role', t: 'An AI prompt-intelligence layer embedded in the design process that turns scattered, one-off AI experiments into a shared, continuously improving capability.' },
+          { b: 'Role', t: 'An AI prompt-intelligence layer that turns scattered, one-off AI experiments into a shared, continuously improving capability, using AI tools to take early design from idea to rendered result fast and fundamentally reshape the traditional rendering workflow.' },
           { b: 'Build', t: 'A searchable knowledge gallery, RAG case retrieval with match scores, a guided prompt builder, and a node-based board for comparing model outputs. Shaped by how designers actually work, it is tuned so someone with no AI background gets reliable results in fewer steps, with design copyright and IP compliance built into the workflow.' },
-          { b: 'Impact', t: 'Standardized prompt quality across AIGC, parametric design and marketing, raised output consistency, and protected design copyright while lowering the barrier for everyday designers.' } ] }
+          { b: 'Impact', t: 'Sped up the traditional rendering workflow ~70%, kept materials and architectural detail consistent, iterated hundreds of options fast, and protected company design copyright while lowering the barrier for everyday designers.' } ] }
       ],
       exp_h: 'Professional Experience',
       exp: [
