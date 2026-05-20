@@ -218,8 +218,8 @@
         spawnChar(p);
       } else if (d >= RADIUS + 30 && c.dissolved) {
         c.dissolved = false;
-        c.el.style.transition = 'none';
-        c.el.style.opacity = '';
+        c.el.style.transition = 'opacity 2s ease';   // slow recover as cursor moves away
+        c.el.style.opacity = '1';
       }
     });
   });
