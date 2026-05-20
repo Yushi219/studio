@@ -1699,3 +1699,51 @@
   window.addEventListener('pointermove', e => { if (scrubbing) seek(e); });
   window.addEventListener('pointerup', () => { scrubbing = false; });
 })();
+
+// ---------- Hover scramble on identity labels (.js-scramble) ----------
+(() => {
+  const CHARS = '!<>-_\/[]{}=+*^?#$%&ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  const els = document.querySelectorAll('.js-scramble');
+  if (!els.length) return;
+
+  function wrap(el) {
+    const text = el.textContent;
+    el.textContent = '';
+    for (const ch of text) {
+      const s = document.createElement('span');
+      s.className = 'sc-ch';
+      s.textContent = ch;
+      s.setAttribute('data-ch', ch);
+      el.appendChild(s);
+    }
+  }
+  function stop(s) {
+    if (s && s._iv) { clearInterval(s._iv); s._iv = null; s.textContent = s.getAttribute('data-ch'); }
+  }
+  function setup(el) {
+    // Make the language switcher store PLAIN text (not our spans) as data-en.
+    if (el.getAttribute('data-en') === null) el.setAttribute('data-en', el.textContent);
+    wrap(el);
+    if (el._scrambleBound) return;
+    el._scrambleBound = true;
+    el.addEventListener('pointerover', e => {
+      const s = e.target.closest && e.target.closest('.sc-ch');
+      if (!s || s._iv) return;
+      const orig = s.getAttribute('data-ch');
+      if (!orig || orig.trim() === '') return;       // skip spaces / slashes' gaps
+      s._iv = setInterval(() => {
+        s.textContent = CHARS[(Math.random() * CHARS.length) | 0];
+      }, 45);
+    });
+    el.addEventListener('pointerout', e => {
+      const s = e.target.closest && e.target.closest('.sc-ch');
+      if (s) stop(s);
+    });
+    el.addEventListener('pointerleave', () => {
+      el.querySelectorAll('.sc-ch').forEach(stop);
+    });
+  }
+  els.forEach(setup);
+  // The switcher resets innerHTML to plain text, then fires langchange — re-wrap.
+  document.addEventListener('langchange', () => els.forEach(wrap));
+})();
