@@ -84,8 +84,8 @@
       photo: true,
       sums_h: '个人优势',
       sums: [
-        { b: '工作背景', t: '约 200 人规模的全球 AEC 设计公司里唯一的设计技术专家。与建筑科学、空间策略、设计可视化三大业务线的 Principal 负责人深度协作，把工作流瓶颈与痛点端到端转化为优雅的技术方案：构建提升设计清晰度、性能与协作的工具、脚本与系统。' },
-        { b: '体验设计', t: '完整把控技术型 AEC / BIM 工具的体验设计链路。把用户研究与工作流分析转化为明确的产品改进方向，做低保真到高保真原型，并联合设计师、Senior Associate 与 PM 等一线使用者反复验证。最终由可用性测试与行为数据决定上线，一路跟到软件落地。' },
+        { b: '工作背景', t: '全球 AEC 设计公司里唯一的设计技术专家。与建筑科学、空间策略、设计可视化三大业务线的 Principal 负责人深度协作，端到端把工作流瓶颈与痛点转化为提升设计清晰度、性能与协作的技术方案与系统。' },
+        { b: '体验设计', t: '完整把控技术型 AEC / BIM 工具的体验设计全链路。把用户研究与工作流分析转化为具体的产品改进，做低保真到高保真原型，并与设计师、SA 与 PM 一同验证。最终由可用性测试与行为数据决定上线，并一路跟到软件落地。' },
         { b: '以往成就', t: '深耕 Autodesk 的 AEC 工具十余年，Revit、AutoCAD、Dynamo 信手拈来，熟知行业真正赖以运转的各类 BIM 工作流。这份领域积淀沉淀为实打实的产品：可持续设计平台斩获 AIA TAP 创新奖、覆盖全球 85+ 个国家用户；AI 渲染管线将出图效率提升约 70%，节省外包成本 5 万美元以上。' },
         { b: '团队赋能', t: '创立并带领公司内部 AI 研究小组与 100+ 人的 Computational Design Community。从脚本与工具，到体系化教学，再到用 AI 工具沉淀内化知识，覆盖 AIGC、参数化设计与 Marketing。以产品思维拆解每个需求：用最精简的功能惠及最多的人，稳步抬升全公司数字化水平。' },
         { b: '综合素养', t: '目标导向，极重细节。能快速切中复杂问题的要害，点破真正的瓶颈与用户痛点，并把方案一路推到上线。善用 vibe coding，数日内即可将新需求与想法转化为可验证的原型，大幅压缩从构想到落地的周期。书面、口头、视觉表达俱清晰，英语流利，新工具新领域上手极快。' }
@@ -156,8 +156,8 @@
       photo: false,
       sums_h: 'Profile',
       sums: [
-        { b: 'Background', t: 'Sole design technologist at a global AEC firm. Embeds with the Principals across Building Science, Space Strategy and Design Visualization, then owns each fix end to end, turning workflow bottlenecks and pain points into elegant technical solutions, tools and systems that advance design clarity, performance and collaboration.' },
-        { b: 'Experience Design', t: 'Runs the full design arc for technical AEC and BIM tools. Turns user research and workflow analysis into concrete product improvements. Prototypes from low to high fidelity and validates with users of the designers, SA and PMs. Usability testing and behavioral data decide what ships, carried through to working software.' },
+        { b: 'Background', t: 'Sole design technologist at a global AEC firm. Embeds with the Principals across Building Science, Space Strategy and Design Visualization, then owns each fix end to end, turning workflow bottlenecks and pain points into technical solutions and systems that advance design clarity, performance and collaboration.' },
+        { b: 'Experience Design', t: 'Runs the full design arc for technical AEC and BIM tools. Turns user research and workflow analysis into concrete product improvements. Prototypes from low to high fidelity and validates with the designers, SA and PMs. Usability testing and behavioral data decide what ships, carried through to working software.' },
         { b: 'Impact', t: 'Decade-plus in the Autodesk AEC ecosystem, turning design and BIM fluency into products: a sustainability platform that won the AIA TAP Innovation Award and reached users in 85+ countries, and an AI rendering pipeline that sped up image output ~70% and cut $50,000+ of outsourcing.' },
         { b: 'Enablement', t: 'Led an internal AI research group and a 100+ member Computational Design Community. Grew it from one-off scripts into structured teaching and AI tools that capture institutional knowledge across AIGC, parametric design and marketing. Treats every request as a product question and lifting firm-wide digital maturity.' },
         { b: 'Profile', t: 'Goal-oriented and detail-minded. Cuts quickly to the core of a messy problem, names the real bottleneck and user pain, and pushes the fix to a shipped release. Leverages vibe coding to turn new requirements and ideas into validated prototypes within days, sharply compressing the concept-to-build cycle. Communicates clearly in writing, in person and in visuals, works in fluent English, and picks up new tools and domains fast.' }
