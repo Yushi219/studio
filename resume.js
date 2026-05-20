@@ -146,6 +146,86 @@
     }
   };
 
+  /* Detailed variant = the full pre-trim content (before the 9pt resize).
+     Only EN differs from the lean version; ZH reuses D.zh. */
+  const DFULL = {
+    en: {
+      name: 'YUSHI WANG',
+      title: 'Principal Experience Designer · Design Technologist&nbsp;&nbsp;—&nbsp;&nbsp;AEC · BIM · AI · Full-Stack',
+      contact: 'yushiw620@gmail.com&nbsp;&nbsp;·&nbsp;&nbsp;Boston, MA <b>(+1) 213-706-9087</b>&nbsp;&nbsp;·&nbsp;&nbsp;Shanghai <b>(+86) 139-1616-4162</b>',
+      photo: false,
+      sums_h: 'Profile',
+      sums: [
+        { b: 'Background', t: 'Sole design technologist at a 200-person global AEC firm. Embeds with the Principals across Building Science, Space Strategy and Design Visualization, then owns each fix end to end, turning workflow bottlenecks and pain points into elegant technical solutions: building tools, scripts and systems that advance design clarity, performance and collaboration.' },
+        { b: 'Experience Design', t: 'Runs the full design arc for technical AEC and BIM tools. Turns user research and workflow analysis into concrete product improvements. Prototypes from low to high fidelity and validates each with real users: the designers, Senior Associates and PMs who use it. Usability testing and behavioral data decide what ships, carried through to working software.' },
+        { b: 'Impact', t: 'More than a decade in the Autodesk AEC stack across Revit, AutoCAD and Dynamo, with a working knowledge of the BIM workflows the industry actually runs on. That fluency turned into products: a sustainability platform that won the AIA TAP Innovation Award and reached users in 85+ countries, and an AI rendering pipeline that sped up image output ~70% and cut $50,000+ of outsourcing.' },
+        { b: 'Enablement', t: 'Founded and led an internal AI research group and a 100+ member Computational Design Community. Grew it from one-off scripts into structured teaching and AI tools that capture institutional knowledge across AIGC, parametric design and marketing. Treats every request as a product question: the smallest feature set that helps the most people, lifting firm-wide digital maturity.' },
+        { b: 'Profile', t: 'Goal-oriented and detail-minded. Cuts quickly to the core of a messy problem, names the real bottleneck and user pain, and pushes the fix to a shipped release. Leverages vibe coding to turn new requirements and ideas into validated prototypes within days, sharply compressing the concept-to-build cycle. Communicates clearly in writing, in person and in visuals, works in fluent English, and picks up new tools and domains fast.' }
+      ],
+      prj_h: 'Selected Projects',
+      prj: [
+        { name: 'Interactive Virtual Mockup (IVM)', sub: 'Experience Design · Immersive VR / AR', date: '2024 — 2025', li: [
+          { b: 'Role', t: 'Physical healthcare mockups cost $12,000–$18,000 per room and cannot show movement, workflow or fast iteration. Built a multi-user VR tool where surgeons, nurses, infection-control staff and architects walk a clinical room before construction, operate real equipment, switch design options, and give structured feedback while their real workflows are observed in context.' },
+          { b: 'Build', t: 'Pipeline from Rhino and Revit into Unity and onto Meta Quest, shipped over three releases: an interactive base environment with screenshot and voice annotation, then higher-fidelity lighting with button-driven equipment controls, then synchronized multiplayer review of complex multi-layer ceilings. An AR track places full-scale options on the real site and swaps components on physical models.' },
+          { b: 'Impact', t: 'Saved $112,000 across seven mockup rooms at Dana-Farber Cancer Institute and cut medical-gas change orders 60% by catching clearance and workflow conflicts before ground-breaking, compressing the cross-disciplinary feedback cycle from weeks to days. Adopted on White Plains Hospital and Dana-Farber; the Chief of Surgery at White Plains called it the most significant advancement in surgical facility design they had seen, and it drew a strong response at a national healthcare design conference.' } ] },
+        { name: 'Floorcast', sub: 'Experience Design · AI Building-Use Simulation', date: 'Feb 2026 — Present', li: [
+          { b: 'Role', t: 'Predicts how a building will really be used before it is built: AI agents play each clinical role to reproduce real routes and workflows and expose how a layout performs.' },
+          { b: 'Build', t: 'Movement, comfort and acoustic heatmaps with live data give the quantitative picture; an AI interview system adds the qualitative why. Extending from one-click 2D-to-3D to a collaborative Revit and Rhino plugin that runs simulation inside the design workflow, toward an AI-agent, data-driven platform that predicts how a building will perform before it is built.' },
+          { b: 'Impact', t: 'Analyzed nurse call-response and rounding times and routes to test nurse-station placement, then re-strategized the wall and double-door positions of the equipment and medication rooms to shorten clinical circulation paths.' } ] },
+        { name: 'PAYETTE Places', sub: 'Experience Design · Interactive Web', date: 'Mar — Jun 2025', li: [
+          { b: 'Role', t: 'Designed the navigation and wayfinding experience for the firm public project tour at the 2025 AIA Conference, a design-communication artifact serving a broad external audience of architects, clients and press across eight built Boston projects.' },
+          { b: 'Build', t: 'Information architecture spanning an interactive city map with one-tap Google Maps routing, building hotspots that open detailed project pages, a navigable gallery with info panels, and animated facade diagrams with walking figures and interactive envelope details; fully responsive, with the site QR printed on company business cards.' },
+          { b: 'Impact', t: 'Became the public-facing showcase for AIA 2025 and a benchmark for how the office presents its work, with roughly 300 visitors on a single open day.' } ] },
+        { name: 'Promptitect', sub: 'Product & Experience Design · AI Prompt Intelligence', date: 'Sep 2025 — Present', li: [
+          { b: 'Role', t: 'An AI prompt-intelligence layer embedded in the design process that turns scattered, one-off AI experiments into a shared, continuously improving capability.' },
+          { b: 'Build', t: 'A searchable knowledge gallery, RAG case retrieval with match scores, a guided prompt builder, and a node-based board for comparing model outputs. Shaped by how designers actually work, it is tuned so someone with no AI background gets reliable results in fewer steps, with design copyright and IP compliance built into the workflow.' },
+          { b: 'Impact', t: 'Standardized prompt quality across AIGC, parametric design and marketing, raised output consistency, and protected design copyright while lowering the barrier for everyday designers.' } ] }
+      ],
+      exp_h: 'Professional Experience',
+      exp: [
+        { name: 'PAYETTE', at: 'Boston, MA', sub: 'Design Technologist', date: 'June 2022 — Present', li: [
+          { b: 'Validation & Feedback', t: 'Built the client-feedback loop that optimizes the design process before construction: Pulse, a web tool that collects structured feedback on 2D plans and digital spatial-design options, and immersive AR/VR review in Unity, C# and iOS ARKit that lets clinical, engineering and architecture teams validate space and equipment decisions on site.' },
+          { b: 'User Research & Experience', t: 'Own user research and interaction design for the firm internal tools serving 200+ architects, engineers and BIM staff: space-strategy tools (Floorish, Sectioneer, Floorcast), sustainability tools (Kaleidoscope, an embodied-carbon platform that won the AIA TAP Award and reached 85+ countries; Solar Comfort) and the IVM healthcare VR review tool ($112K mockup savings, change orders down 60%). Conduct interviews, workflow analysis and contextual observation, build low- to high-fidelity prototypes, and lead usability testing to validate current and future features.' },
+          { b: 'Computational Design', t: 'Build professional AEC tooling hands-on: 30+ Grasshopper and Dynamo scripts, a .NET Revit add-in that installs a company plugin ribbon of in-house tools across the office, plus Python Rhino plugins and generative design; consolidated into the firm parametric script library and digital training system, with regular digital and AI lectures that brought 100+ designers to frontier practice.' },
+          { b: 'Applied AI', t: 'Drove applied AI end to end: led the AI research group that tuned image-to-image generation into a faster rendering pipeline (~70% efficiency, $50K+ outsourcing saved), built a prompt-intelligence tool that makes reliable image generation easy for any designer and an AI video tool that turned competitive project-bid pitches from static decks into dynamic visual storytelling, and now use vibe coding to stand up MVP demos in days plus AI agents, LLMs and RAG to ship internal web tools that streamline the design workflow.' },
+          { b: 'Full-Stack Delivery', t: 'Take 10+ tools from concept to production largely single-handed: meet regularly with the three practice Principals and each project-group PM to surface needs and pain points and turn them into solutions, build front and back end, deploy on Azure with versioned releases, and partner with engineering to land design specs and resolve implementation issues, lifting target workflows 50 to 80 percent. Partnering with the marketing and finance teams, also built the Ask Tom RAG agent and Payette Lens, an AI financial-data visualization tool.' },
+          { b: 'Leadership & Management', t: 'Founded and lead the firm AI research group and a 100+ member design-tech community: set multi-year tooling and AI strategy, build training, onboarding and version-controlled knowledge systems, govern design and IP standards, mentor designers across offices, report monthly to firm Principals and leadership, and drive cross-functional, globally distributed collaboration that influences decisions at every level.' } ] },
+        { name: 'Dowbuilt', at: 'Seattle, WA', sub: 'Digital Construction Project Engineer', date: 'Dec 2021 — June 2022', li: [
+          { b: 'BIM Automation', t: 'Built a Python/Revit BIM modeling and automated quantity-take-off system; one-click material lists and cost estimates cut take-off from days to minutes (about 90% faster), with real-time cost data across 10+ high-end residential projects.' },
+          { b: 'Pre-construction & Field', t: 'Delivered Grasshopper/Dynamo/Python tooling for excavation modeling, 4D scheduling, clash detection and CNC-ready fabrication; coordinated weekly with PMs, superintendents and fabricators.' } ] }
+      ],
+      int_h: 'Internship',
+      int: [
+        { name: 'NBBJ', at: 'Seattle, WA', sub: 'Digital Design Specialist Intern', date: 'July — Sept 2021', li: [
+          { b: 'UI/UX', t: 'Led a full UI/UX redesign of the firm enterprise digital-technology platform (unified tool search and technical-asset management), improving usability and cross-office collaboration.' },
+          { b: 'Parametric R&D', t: 'Built parametric Grasshopper/Dynamo tools (brick-porosity, solar-tracking façade, automated daylight simulation) adopted in pilot projects and QA/QC.' } ] }
+      ],
+      edu_h: 'Education',
+      edu: [
+        { l: 'University of Southern California', m: 'M.S. Building Science · GPA 4.0 / 4.0', r: 'Los Angeles · 2019 — 2021' },
+        { l: 'Shanghai University of Engineering Science', m: 'B.S. Construction Management · GPA 4.0 / 4.0', r: 'Shanghai · 2016 — 2018' }
+      ],
+      sk_h: 'Skills & Certificate',
+      sk: [
+        { b: 'Skills', t: 'User Research (qual + quant) · Usability Testing · Interaction Design · Interactive Prototyping · Workflow Analysis · Data-Driven Design · Design Communication · Cross-functional Influence' },
+        { b: 'Design', t: 'Figma · Adobe Creative Cloud · InDesign · Claude Design' },
+        { b: 'Computational Design', t: 'Rhino · Grasshopper · Revit · Dynamo · Rhino.Inside' },
+        { b: 'Development', t: 'JavaScript · HTML/CSS · Node.js · React · Python · GitHub · Azure · Unity · C# · iOS ARKit · Normcore · MySQL · Power BI · Tableau · D3 · Power Automate' },
+        { b: 'AI', t: 'Claude Code · Codex · Gemini · ComfyUI · xfigura · Krea · Runway · Kohya · RAG' },
+        { b: 'Certificate', t: 'LEED AP (USGBC, 2021)' },
+        { b: 'Awards', t: '2022 ARCHITECT R+D Award & AIA TAP Innovation Award (Kaleidoscope) · IESLA Russell Cole Memorial Design Competition — Special Recognition, Advanced (2020)' }
+      ]
+    },
+    zh: D.zh
+  };
+
+  const VARIANTS = ['lean', 'full'];
+  function varLabel() {
+    return state.lang === 'zh'
+      ? (state.variant === 'full' ? '精简版' : '详细版')
+      : (state.variant === 'full' ? 'Lean' : 'Detailed');
+  }
+
   const TPL = [
     { id: 'slate', en: 'Slate', zh: '岩蓝' },
     { id: 'mono',  en: 'Editorial', zh: '极简' },
@@ -155,7 +235,7 @@
 
   /* ----------  STATE  ---------- */
   const defState = () => ({ tpl: 'slate', lang: (window.__lang === 'zh' ? 'zh' : 'en'),
-                            ov: {}, off: {}, fs: {}, zoom: 1, savedAt: 0 });
+                            variant: 'lean', ov: {}, off: {}, fs: {}, zoom: 1, savedAt: 0 });
   let state = defState();
   function loadState() {
     let r = null;
@@ -204,7 +284,7 @@
   }
 
   function render() {
-    const d = D[state.lang];
+    const d = (state.variant === 'full' ? DFULL : D)[state.lang];
     page.setAttribute('data-tpl', state.tpl);
     page.innerHTML = '';
 
@@ -290,7 +370,7 @@
   }
 
   function applyOverrides() {
-    const lp = state.lang + '::';
+    const lp = (state.variant || 'lean') + '::' + state.lang + '::';
     page.querySelectorAll('[data-rid]').forEach(n => {
       const rid = n.getAttribute('data-rid');
       const o = state.ov[lp + rid];
@@ -344,13 +424,15 @@
     TPL.forEach(t => { const o = el('option'); o.value = t.id; o.textContent = t[state.lang] || t.en; sel.appendChild(o); });
     sel.value = state.tpl;
     const bLang = mkBtn(state.lang === 'zh' ? 'EN' : '中文', 'rz-lang');
+    const bVar = mkBtn(varLabel(), 'rz-var');
     const bExp = mkBtn('Export PDF');
+    const bDump = mkBtn(state.lang === 'zh' ? '导出内容' : 'Export Text', 'rz-dump');
     const bSave = mkBtn('Save', 'rz-primary');
     const bHist = mkBtn('History');
     const bX = mkBtn('✕', 'rz-x');
 
     const div = () => el('span', 'rz-divider');
-    [bEdit, div(), sel, div(), bLang, div(), bExp, bSave, bHist, div(), bX]
+    [bEdit, div(), sel, bVar, div(), bLang, div(), bExp, bDump, bSave, bHist, div(), bX]
       .forEach(n => bar.appendChild(n));
 
     stage = el('div', 'rz-stage');
@@ -380,10 +462,21 @@
     bLang.addEventListener('click', () => {
       state.lang = state.lang === 'zh' ? 'en' : 'zh';
       bLang.textContent = state.lang === 'zh' ? 'EN' : '中文';
+      bVar.textContent = varLabel();
+      bDump.textContent = state.lang === 'zh' ? '导出内容' : 'Export Text';
       TPL.forEach((t, i) => { sel.options[i].textContent = t[state.lang] || t.en; });
       render(); persist();
     });
     bExp.addEventListener('click', exportPDF);
+    bDump.addEventListener('click', dumpContent);
+    bVar.addEventListener('click', () => {
+      state.variant = (state.variant === 'full') ? 'lean' : 'full';
+      bVar.textContent = varLabel();
+      render(); persist();
+      toast(state.lang === 'zh'
+        ? (state.variant === 'full' ? '已切到详细版（删减后点"导出内容"发我）' : '已切到精简版')
+        : (state.variant === 'full' ? 'Detailed version — trim it, then Export Text' : 'Lean version'));
+    });
     bSave.addEventListener('click', saveSnapshot);
     bHist.addEventListener('click', () => { hist.classList.contains('on') ? hist.classList.remove('on') : openHist(); });
 
@@ -429,6 +522,8 @@
       if (!ov || !ov.classList.contains('on')) return;
       state.lang = window.__lang === 'zh' ? 'zh' : 'en';
       bLang.textContent = state.lang === 'zh' ? 'EN' : '中文';
+      bVar.textContent = varLabel();
+      bDump.textContent = state.lang === 'zh' ? '导出内容' : 'Export Text';
       TPL.forEach((t, i) => { sel.options[i].textContent = t[state.lang] || t.en; });
       render(); persist();
     });
@@ -452,7 +547,7 @@
 
   function saveOverride(node) {
     const rid = node.getAttribute('data-rid');
-    state.ov[state.lang + '::' + rid] = node.innerHTML;
+    state.ov[(state.variant || 'lean') + '::' + state.lang + '::' + rid] = node.innerHTML;
   }
 
   /* --- font toolbar follow focus --- */
@@ -599,10 +694,22 @@
     sel.value = state.tpl;
     bLang.textContent = state.lang === 'zh' ? 'EN' : '中文';
     TPL.forEach((t, i) => { sel.options[i].textContent = t[state.lang] || t.en; });
+    const bVar = ov.querySelector('.rz-var');
+    if (bVar) bVar.textContent = varLabel();
+    const bDump = ov.querySelector('.rz-dump');
+    if (bDump) bDump.textContent = state.lang === 'zh' ? '导出内容' : 'Export Text';
   }
 
   /* ----------  EXPORT  ---------- */
   function exportPDF() {
+    // Detailed variant has no prebuilt PDF — it's meant to be trimmed, then
+    // sent to me via "Export Text" to generate the final PDF.
+    if (state.variant === 'full') {
+      toast(state.lang === 'zh'
+        ? '详细版没有现成 PDF：删减后点"导出内容"发我生成 ✓'
+        : 'Detailed has no prebuilt PDF — trim it, then use Export Text');
+      return;
+    }
     // Download the pre-rendered, print-formatted PDF (built by the export pipeline)
     // instead of invoking the browser print dialog.
     const lang = (state.lang === 'zh') ? 'ZH' : 'EN';
@@ -614,6 +721,24 @@
     a.click();
     a.remove();
     toast(state.lang === 'zh' ? '已下载排版版 PDF ✓' : 'Downloaded formatted PDF ✓');
+  }
+
+  // Dump the current (edited) content as JSON so it can be turned into a PDF.
+  function dumpContent() {
+    const fields = {};
+    page.querySelectorAll('[data-rid]').forEach(n => {
+      fields[n.getAttribute('data-rid')] = n.innerHTML.trim();
+    });
+    const payload = { variant: state.variant, lang: state.lang, tpl: state.tpl,
+                      savedAt: Date.now(), fields: fields };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'resume-content-' + state.variant + '-' + state.lang + '.json';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    toast(state.lang === 'zh' ? '已导出内容 JSON，发我即可生成 PDF ✓' : 'Exported content JSON ✓');
   }
 
   /* ----------  TOAST  ---------- */
