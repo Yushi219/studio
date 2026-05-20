@@ -317,11 +317,8 @@
     /* PROJECTS */
     page.appendChild(itemSection('projects', 'sec-prj-h', d.prj_h, d.prj, 'prj'));
 
-    /* EXPERIENCE */
-    page.appendChild(itemSection('experience', 'sec-exp-h', d.exp_h, d.exp, 'exp', true));
-
-    /* INTERNSHIP */
-    page.appendChild(itemSection('internship', 'sec-int-h', d.int_h, d.int, 'int', true));
+    /* EXPERIENCE (internship folded in — no separate section) */
+    page.appendChild(itemSection('experience', 'sec-exp-h', d.exp_h, d.exp.concat(d.int || []), 'exp', true));
 
     /* EDUCATION */
     const be = block('education', 'rz-sec');
