@@ -53,13 +53,13 @@
           { b: 'Full-Stack Delivery', t: 'Take 10+ tools from concept to production largely single-handed: meet with the three practice Principals and project-group PMs to surface needs, build front and back end, deploy on Azure with versioned releases, and land specs with engineering, lifting workflows 50–80%. Also built the Ask Tom RAG agent and Payette Lens (AI financial-data visualization).' },
           { b: 'Leadership & Management', t: 'Founded and lead the firm AI research group and a 100+ member design-tech community: set multi-year tooling and AI strategy, build training, onboarding and version-controlled knowledge systems, govern design and IP standards, mentor designers across offices, and report monthly to firm Principals and leadership.' } ] },
         { name: 'Dowbuilt', at: 'Seattle, WA', sub: 'Digital Construction Project Engineer', date: 'Dec 2021 — June 2022', li: [
-          { b: 'BIM Automation', t: 'Built a Python/Revit BIM modeling and automated quantity-take-off system; one-click material lists and cost estimates cut take-off from days to minutes (about 90% faster), with real-time cost data across 10+ high-end residential projects.' },
-          { b: 'Pre-construction & Field', t: 'Delivered Grasshopper/Dynamo/Python tooling for excavation modeling, 4D scheduling, clash detection and CNC-ready fabrication; coordinated weekly with PMs, superintendents and fabricators.' } ] }
+          { b: 'BIM Automation', t: 'Built a production-grade Python/Revit BIM modeling and automated quantity-take-off system; one-click material lists and cost estimates cut take-off from days to minutes (~90% faster), with real-time cost data across 10+ high-end residential projects.' },
+          { b: 'BIM & Coordination', t: 'Delivered Revit BIM modeling and clash detection plus Grasshopper/Dynamo/Python tooling for excavation, 4D scheduling and CNC-ready fabrication; coordinated weekly with PMs, superintendents and fabricators.' } ] }
       ],
       int_h: 'Internship',
       int: [
         { name: 'NBBJ', at: 'Seattle, WA', sub: 'Digital Design Specialist Intern', date: 'July — Sept 2021', li: [
-          { b: 'UI/UX', t: 'Led a full UI/UX redesign of the firm enterprise digital-technology platform (unified tool search and technical-asset management), improving usability and cross-office collaboration.' },
+          { b: 'UX', t: 'Led a full UX redesign of the enterprise digital-technology platform (unified tool search and technical-asset management), improving usability, findability and cross-office collaboration.' },
           { b: 'Parametric R&D', t: 'Built parametric Grasshopper/Dynamo tools (brick-porosity, solar-tracking façade, automated daylight simulation) adopted in pilot projects and QA/QC.' } ] }
       ],
       edu_h: 'Education',
@@ -119,13 +119,13 @@
           { b: '全栈交付', t: '10+ 工具基本由我一人从概念做到上线：定期与三个组 Principal 及各设计项目组 PM 开会，挖掘需求与痛点并转化为解决方案；前后端开发、Azure 部署与版本化发布，与开发协作落地设计规范、解决影响设计的实现问题，目标工作流提效 50% 到 80%。并与市场与金融团队协作，开发 Ask Tom RAG 智能体与 Payette Lens（AI 金融数据可视化）。' },
           { b: '领导与管理', t: '创立并带领公司 AI 研究小组与 100+ 人设计技术社区：制定多年工具与 AI 战略，搭建培训、新人 onboarding 与版本化知识体系，管控设计与版权规范，跨办公室带教设计师，每月向公司 Principal 与管理层汇报，并推动跨职能、全球分布式协作，影响各层级决策。' } ] },
         { name: 'Dowbuilt', at: '西雅图', sub: '数字建筑项目工程师', date: '2021 年 12 月 — 2022 年 6 月', li: [
-          { b: 'BIM 自动化', t: '主导 Python / Revit 的 BIM 建模与工料自动测算系统；一键生成材料清单与成本预估，测算从数日缩短到分钟级（约提速 90%），为 10+ 高端住宅项目提供实时成本数据。' },
-          { b: '施工前期与现场', t: '用 Grasshopper / Dynamo / Python 实现挖掘建模、4D 进度可视化、碰撞检测与 CNC 可交付件；每周与项目经理、现场主管与加工方协调。' } ] }
+          { b: 'BIM 自动化', t: '主导 Python / Revit 的工业级 BIM 建模与工料自动测算系统；一键生成材料清单与成本预估，测算从数日缩短到分钟级（约提速 90%），为项目经理在 10+ 高端住宅项目上提供实时成本数据。' },
+          { b: 'BIM 与协调', t: '搭建并维护 Revit BIM 模型与碰撞检测，并用 Grasshopper / Dynamo / Python 实现挖掘建模、4D 进度可视化与 CNC 可交付件；每周以模型为中心与项目经理、现场主管与加工方协调。' } ] }
       ],
       int_h: '实习经历',
       int: [
         { name: 'NBBJ', at: '西雅图', sub: '数字设计专家（实习）', date: '2021 年 7 月 — 9 月', li: [
-          { b: 'UI/UX', t: '主导公司数字技术平台的 UI/UX 全流程重构（统一工具检索与技术资产管理），提升可用性与跨办公室协作。' },
+          { b: 'UX', t: '主导公司企业级数字平台的 UX 全流程重构（统一工具检索与技术资产管理），提升可用性、可检索性与跨办公室协作。' },
           { b: '参数化研发', t: '用 Grasshopper / Dynamo 开发参数化工具（砖墙孔隙率、太阳追踪幕墙、日光分析自动化），在试点项目与 QA/QC 中落地。' } ] }
       ],
       edu_h: '教育经历',
@@ -191,13 +191,13 @@
           { b: 'Full-Stack Delivery', t: 'Take 10+ tools from concept to production largely single-handed: meet regularly with the three practice Principals and each project-group PM to surface needs and pain points and turn them into solutions, build front and back end, deploy on Azure with versioned releases, and partner with engineering to land design specs and resolve implementation issues, lifting target workflows 50 to 80 percent. Partnering with the marketing and finance teams, also built the Ask Tom RAG agent and Payette Lens, an AI financial-data visualization tool.' },
           { b: 'Leadership & Management', t: 'Founded and lead the firm AI research group and a 100+ member design-tech community: set multi-year tooling and AI strategy, build training, onboarding and version-controlled knowledge systems, govern design and IP standards, mentor designers across offices, report monthly to firm Principals and leadership, and drive cross-functional, globally distributed collaboration that influences decisions at every level.' } ] },
         { name: 'Dowbuilt', at: 'Seattle, WA', sub: 'Digital Construction Project Engineer', date: 'Dec 2021 — June 2022', li: [
-          { b: 'BIM Automation', t: 'Built a Python/Revit BIM modeling and automated quantity-take-off system; one-click material lists and cost estimates cut take-off from days to minutes (about 90% faster), with real-time cost data across 10+ high-end residential projects.' },
-          { b: 'Pre-construction & Field', t: 'Delivered Grasshopper/Dynamo/Python tooling for excavation modeling, 4D scheduling, clash detection and CNC-ready fabrication; coordinated weekly with PMs, superintendents and fabricators.' } ] }
+          { b: 'BIM Automation', t: 'Built a production-grade Python/Revit BIM modeling and automated quantity-take-off system; one-click material lists and cost estimates cut take-off from days to minutes (~90% faster), with real-time cost data across 10+ high-end residential projects.' },
+          { b: 'BIM & Coordination', t: 'Delivered Revit BIM modeling and clash detection plus Grasshopper/Dynamo/Python tooling for excavation, 4D scheduling and CNC-ready fabrication; coordinated weekly with PMs, superintendents and fabricators.' } ] }
       ],
       int_h: 'Internship',
       int: [
         { name: 'NBBJ', at: 'Seattle, WA', sub: 'Digital Design Specialist Intern', date: 'July — Sept 2021', li: [
-          { b: 'UI/UX', t: 'Led a full UI/UX redesign of the firm enterprise digital-technology platform (unified tool search and technical-asset management), improving usability and cross-office collaboration.' },
+          { b: 'UX', t: 'Led a full UX redesign of the enterprise digital-technology platform (unified tool search and technical-asset management), improving usability, findability and cross-office collaboration.' },
           { b: 'Parametric R&D', t: 'Built parametric Grasshopper/Dynamo tools (brick-porosity, solar-tracking façade, automated daylight simulation) adopted in pilot projects and QA/QC.' } ] }
       ],
       edu_h: 'Education',
@@ -212,8 +212,7 @@
         { b: 'Computational Design', t: 'Rhino · Grasshopper · Revit · Dynamo · Rhino.Inside' },
         { b: 'Development', t: 'JavaScript · HTML/CSS · Node.js · React · Python · GitHub · Azure · Unity · C# · iOS ARKit · Normcore · MySQL · Power BI · Tableau · D3 · Power Automate' },
         { b: 'AI', t: 'Claude Code · Codex · Gemini · ComfyUI · xfigura · Krea · Runway · Kohya · RAG' },
-        { b: 'Certificate', t: 'LEED AP (USGBC, 2021)' },
-        { b: 'Awards', t: '2022 ARCHITECT R+D Award & AIA TAP Innovation Award (Kaleidoscope) · IESLA Russell Cole Memorial Design Competition — Special Recognition, Advanced (2020)' }
+        { b: 'Awards & Certificate', t: 'LEED AP (USGBC, 2021) · 2022 ARCHITECT R+D & AIA TAP Innovation Award (Kaleidoscope) · IESLA Russell Cole Design Competition, Advanced (2020)' }
       ]
     },
     zh: D.zh
