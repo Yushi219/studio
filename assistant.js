@@ -237,6 +237,7 @@
     });
     return s;
   }
+  const byKey = Object.fromEntries(KB.map(e => [e.key, e]));
   function rank(q) {
     return KB.map(e => ({ e, s: score(e, q) })).filter(x => x.s > 0).sort((a, b) => b.s - a.s).map(x => x.e);
   }
