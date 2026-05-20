@@ -429,10 +429,11 @@
     const bDump = mkBtn(state.lang === 'zh' ? '导出内容' : 'Export Text', 'rz-dump');
     const bSave = mkBtn('Save', 'rz-primary');
     const bHist = mkBtn('History');
+    const bReset = mkBtn(state.lang === 'zh' ? '重置' : 'Reset', 'rz-reset');
     const bX = mkBtn('✕', 'rz-x');
 
     const div = () => el('span', 'rz-divider');
-    [bEdit, div(), sel, bVar, div(), bLang, div(), bExp, bDump, bSave, bHist, div(), bX]
+    [bEdit, div(), sel, bVar, div(), bLang, div(), bExp, bDump, bSave, bHist, bReset, div(), bX]
       .forEach(n => bar.appendChild(n));
 
     stage = el('div', 'rz-stage');
@@ -464,6 +465,7 @@
       bLang.textContent = state.lang === 'zh' ? 'EN' : '中文';
       bVar.textContent = varLabel();
       bDump.textContent = state.lang === 'zh' ? '导出内容' : 'Export Text';
+      bReset.textContent = state.lang === 'zh' ? '重置' : 'Reset';
       TPL.forEach((t, i) => { sel.options[i].textContent = t[state.lang] || t.en; });
       render(); persist();
     });
@@ -479,6 +481,15 @@
     });
     bSave.addEventListener('click', saveSnapshot);
     bHist.addEventListener('click', () => { hist.classList.contains('on') ? hist.classList.remove('on') : openHist(); });
+    bReset.addEventListener('click', () => {
+      const msg = state.lang === 'zh'
+        ? '清除本浏览器里所有手动修改，恢复到代码里保存的版本？\n（已保存进代码的 Profile 和核心技术 Build 都会回来；本地未保存的临时改动会丢失）'
+        : 'Clear all manual edits in this browser and reload the saved code version?';
+      if (!window.confirm(msg)) return;
+      state.ov = {}; state.off = {}; state.fs = {};
+      render(); persist();
+      toast(state.lang === 'zh' ? '已重置为代码保存版 ✓' : 'Reset to saved version ✓');
+    });
 
     // format toolbar
     fmt.addEventListener('mousedown', e => e.preventDefault());
@@ -524,6 +535,7 @@
       bLang.textContent = state.lang === 'zh' ? 'EN' : '中文';
       bVar.textContent = varLabel();
       bDump.textContent = state.lang === 'zh' ? '导出内容' : 'Export Text';
+      bReset.textContent = state.lang === 'zh' ? '重置' : 'Reset';
       TPL.forEach((t, i) => { sel.options[i].textContent = t[state.lang] || t.en; });
       render(); persist();
     });
@@ -698,6 +710,8 @@
     if (bVar) bVar.textContent = varLabel();
     const bDump = ov.querySelector('.rz-dump');
     if (bDump) bDump.textContent = state.lang === 'zh' ? '导出内容' : 'Export Text';
+    const bReset = ov.querySelector('.rz-reset');
+    if (bReset) bReset.textContent = state.lang === 'zh' ? '重置' : 'Reset';
   }
 
   /* ----------  EXPORT  ---------- */
