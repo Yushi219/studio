@@ -253,7 +253,6 @@
 
   /* ----------  DOM REFS  ---------- */
   let ov, page, stage, hist, fmt, toastEl, zoomEl, built = false;
-  let previewMode = false, pagT = 0;
   const esc = s => String(s);
 
   /* ----------  RENDER  ---------- */
@@ -286,7 +285,7 @@
 
   function render() {
     const d = DFULL[state.lang];
-    page.setAttribute('data-tpl', previewMode ? 'mono' : state.tpl);
+    page.setAttribute('data-tpl', state.tpl);
     page.innerHTML = '';
 
     /* HEADER */
@@ -342,42 +341,6 @@
     applyOverrides();
     applyOffsets();
     applyZoom();
-    if (previewMode) requestAnimationFrame(paginate);
-  }
-
-  /* ----------  PRINT-PREVIEW PAGINATION (matches the 9pt PDF)  ---------- */
-  function clearPaginate() {
-    if (!page) return;
-    page.querySelectorAll('.rz-pagebreak, .rz-pagespacer').forEach(n => n.remove());
-  }
-  function paginate() {
-    clearPaginate();
-    if (!previewMode || !page) return;
-    const pageH = Math.round(794 * 287 / 210); // A4 content height @96dpi, 5mm v-margins
-    const pageTop = page.getBoundingClientRect().top;
-    let limit = pageH;
-    // Atomic units cannot split across pages (same as break-inside:avoid in the PDF).
-    page.querySelectorAll('.rz-item, .rz-line2').forEach(u => {
-      const r = u.getBoundingClientRect();
-      const top = r.top - pageTop, h = r.height;
-      if (h >= pageH) return;
-      if (top + h > limit) {
-        const gap = limit - top;
-        if (gap > 4) {
-          const sp = el('div', 'rz-pagespacer');
-          sp.style.height = gap + 'px';
-          u.parentNode.insertBefore(sp, u);
-        }
-        limit += pageH;
-      }
-    });
-    const pages = Math.max(1, Math.ceil(page.scrollHeight / pageH));
-    for (let i = 1; i < pages; i++) {
-      const ln = el('div', 'rz-pagebreak');
-      ln.setAttribute('data-label', 'Page ' + (i + 1));
-      ln.style.top = (i * pageH) + 'px';
-      page.appendChild(ln);
-    }
   }
 
   function itemSection(blk, hRid, hTxt, items, pfx, showAt) {
@@ -426,7 +389,7 @@
   function clampZoom(z) { return Math.max(0.5, Math.min(2, Math.round(z * 100) / 100)); }
   function applyZoom() {
     if (!page) return;
-    const z = previewMode ? 1 : (state.zoom || 1);
+    const z = state.zoom || 1;
     page.style.zoom = (z !== 1) ? z : '';
   }
   function showZoomBadge() {
@@ -477,7 +440,6 @@
     TPL.forEach(t => { const o = el('option'); o.value = t.id; o.textContent = t[state.lang] || t.en; sel.appendChild(o); });
     sel.value = state.tpl;
     const bLang = mkBtn(state.lang === 'zh' ? 'EN' : '中文', 'rz-lang');
-    const bPrev = mkBtn(state.lang === 'zh' ? '预览' : 'Preview', 'rz-prev');
     const selVer = el('select', 'rz-ver');
     selVer.title = state.lang === 'zh' ? '公司版本' : 'Company version';
     fillVerSelect(selVer);
@@ -488,7 +450,7 @@
     const bX = mkBtn('✕', 'rz-x');
 
     const div = () => el('span', 'rz-divider');
-    [bEdit, bPrev, div(), sel, selVer, div(), bLang, div(), bDump, bSave, bHist, bReset, div(), bX]
+    [bEdit, div(), sel, selVer, div(), bLang, div(), bDump, bSave, bHist, bReset, div(), bX]
       .forEach(n => bar.appendChild(n));
 
     stage = el('div', 'rz-stage');
@@ -514,20 +476,10 @@
     /* --- wiring --- */
     bX.addEventListener('click', close);
     bEdit.addEventListener('click', () => setEdit(!editing));
-    bPrev.addEventListener('click', () => {
-      previewMode = !previewMode;
-      ov.classList.toggle('rz-preview', previewMode);
-      bPrev.classList.toggle('is-on', previewMode);
-      render();
-      toast(state.lang === 'zh'
-        ? (previewMode ? '打印预览：版式 / 分页 / 每行字数与导出 PDF 一致' : '已退出打印预览')
-        : (previewMode ? 'Print preview — matches the exported PDF' : 'Exited print preview'));
-    });
     sel.addEventListener('change', () => { state.tpl = sel.value; render(); persist(); });
     bLang.addEventListener('click', () => {
       state.lang = state.lang === 'zh' ? 'en' : 'zh';
       bLang.textContent = state.lang === 'zh' ? 'EN' : '中文';
-      bPrev.textContent = state.lang === 'zh' ? '预览' : 'Preview';
       bDump.textContent = state.lang === 'zh' ? '导出内容' : 'Export Text';
       bReset.textContent = state.lang === 'zh' ? '重置' : 'Reset';
       selVer.title = state.lang === 'zh' ? '公司版本' : 'Company version';
@@ -589,7 +541,6 @@
       const t = e.target.closest('[data-rid]');
       if (t) {
         saveOverride(t); autoSave();
-        if (previewMode) { clearTimeout(pagT); pagT = setTimeout(paginate, 350); }
       }
     });
 
@@ -608,15 +559,12 @@
         e.preventDefault(); resetZoom();
       }
     });
-    if (document.fonts && document.fonts.ready) {
-      document.fonts.ready.then(() => { if (previewMode) paginate(); });
-    }
     document.addEventListener('langchange', () => {
       if (!ov || !ov.classList.contains('on')) return;
       state.lang = window.__lang === 'zh' ? 'zh' : 'en';
       bLang.textContent = state.lang === 'zh' ? 'EN' : '中文';
-      bPrev.textContent = state.lang === 'zh' ? '预览' : 'Preview';
-      bVar.textContent = varLabel();
+      selVer.title = state.lang === 'zh' ? '公司版本' : 'Company version';
+      fillVerSelect(selVer);
       bDump.textContent = state.lang === 'zh' ? '导出内容' : 'Export Text';
       bReset.textContent = state.lang === 'zh' ? '重置' : 'Reset';
       TPL.forEach((t, i) => { sel.options[i].textContent = t[state.lang] || t.en; });
@@ -794,8 +742,6 @@
     if (bDump) bDump.textContent = state.lang === 'zh' ? '导出内容' : 'Export Text';
     const bReset = ov.querySelector('.rz-reset');
     if (bReset) bReset.textContent = state.lang === 'zh' ? '重置' : 'Reset';
-    const bPrev = ov.querySelector('.rz-prev');
-    if (bPrev) bPrev.textContent = state.lang === 'zh' ? '预览' : 'Preview';
   }
 
   /* ----------  EXPORT  ---------- */

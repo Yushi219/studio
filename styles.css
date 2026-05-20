@@ -2776,29 +2776,6 @@ body.rz-open .cursor-dot, body.rz-open .cursor-ring { opacity: 0 !important; }
 /* Tighter gap between the contact line and the PROFILE section */
 .rz-page .rz-block[data-blk="summary"] { margin-top: 5px; }
 
-/* ---- on-screen Print Preview: WYSIWYG match to the exported 9pt PDF ---- */
-#rz-overlay.rz-preview .rz-stage { overflow: auto; background: #e9e7e1; }
-#rz-overlay.rz-preview .rz-page {
-  position: relative !important;
-  width: 794px !important; max-width: 794px !important; min-height: 0 !important;
-  zoom: 1 !important; padding: 0 22px !important; --rz-fs: 1.20 !important;
-  margin: 26px auto !important; background: #fff !important;
-  box-shadow: 0 3px 16px rgba(0,0,0,.20); background-image: none !important;
-}
-#rz-overlay.rz-preview .rz-page::before, #rz-overlay.rz-preview .rz-page::after { display: none !important; }
-#rz-overlay.rz-preview .rz-page .rz-sum p,
-#rz-overlay.rz-preview .rz-page .rz-it-body li { line-height: 1.18 !important; }
-#rz-overlay.rz-preview .rz-pagespacer { width: 1px; pointer-events: none; }
-#rz-overlay.rz-preview .rz-pagebreak {
-  position: absolute; left: 0; right: 0; height: 0; z-index: 5;
-  border-top: 1px dashed #d2693c; pointer-events: none;
-}
-#rz-overlay.rz-preview .rz-pagebreak::after {
-  content: attr(data-label); position: absolute; right: 4px; top: 3px;
-  font: 600 10px/1 var(--mono, ui-monospace, monospace); letter-spacing: .12em;
-  color: #fff; background: #d2693c; padding: 2px 7px; border-radius: 0 0 4px 4px;
-}
-
 /* ============================================================
    PORTFOLIO DECK  —  exportable, in the site's own aesthetic
    Full-screen 1600×900 stage scaled to fit; bottom filmstrip.
