@@ -2770,8 +2770,11 @@ body.rz-open .cursor-dot, body.rz-open .cursor-ring { opacity: 0 !important; }
   .rz-block[data-blk="experience"] { break-before: page !important; page-break-before: always !important; }
 }
 
-/* Slightly looser spacing between Professional Experience bullet points */
-.rz-page .rz-block[data-blk="experience"] .rz-it-body li + li { margin-top: 4px; }
+/* Slightly looser spacing between Selected Projects + Professional Experience bullets */
+.rz-page .rz-block[data-blk="experience"] .rz-it-body li + li,
+.rz-page .rz-block[data-blk="projects"] .rz-it-body li + li { margin-top: 4px; }
+/* Tighter gap between the contact line and the PROFILE section */
+.rz-page .rz-block[data-blk="summary"] { margin-top: 5px; }
 
 /* ---- on-screen Print Preview: WYSIWYG match to the exported 9pt PDF ---- */
 #rz-overlay.rz-preview .rz-stage { overflow: auto; background: #e9e7e1; }
