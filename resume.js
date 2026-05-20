@@ -13,12 +13,12 @@
   const D = {
     en: {
       name: 'YUSHI WANG',
-      title: 'Experience Designer · Design Technologist&nbsp;&nbsp;—&nbsp;&nbsp;AEC · BIM · AI · Full-Stack',
+      title: 'Principal Experience Designer · Design Technologist&nbsp;&nbsp;—&nbsp;&nbsp;AEC · BIM · AI · Full-Stack',
       contact: 'yushiw620@gmail.com&nbsp;&nbsp;·&nbsp;&nbsp;Boston, MA <b>(+1) 213-706-9087</b>&nbsp;&nbsp;·&nbsp;&nbsp;Shanghai <b>(+86) 139-1616-4162</b>',
       photo: false,
       sums_h: 'Profile',
       sums: [
-        { b: 'Background', t: 'Sole design technologist at a 200-person global AEC firm. Partners directly with the Principals who lead the Building Science, Space Strategy and Healthcare practices, turning the needs of each discipline into the right tool, and works the day-to-day details with the designers and Senior Associates who use it. Owns the full path: research, interaction design, testing and detail work, design specs, release, then usage tracking and internal rollout. Effectively a one-person product company serving the whole firm.' },
+        { b: 'Background', t: 'Sole design technologist at a 200-person global AEC firm. Partners with the Principals leading the Building Science, Space Strategy and Design Visualization practices, embedding with their teams to surface the real bottlenecks and unspoken pain points across each discipline. Then ships the tools end to end: research, interaction design, testing, specs, release, usage tracking and rollout. Effectively a one-person product company inside the firm, finding the problem first and shipping the solution.' },
         { b: 'Experience Design', t: 'Runs the full design arc for technical AEC and BIM tools. Turns user research, including interviews, workflow analysis and qualitative and quantitative methods, into concrete product improvements. Designs and weighs several options, prototypes from low to high fidelity, and validates each with real users and the engineers who build it. Usability testing and behavioral data decide what ships, with the chosen design carried through to working software, build issues included.' },
         { b: 'Impact', t: 'More than a decade in the Autodesk AEC stack across Revit, AutoCAD and Dynamo, with a working knowledge of the BIM workflows the industry actually runs on. That fluency turned into products: a sustainability platform that won the AIA TAP Innovation Award and reached users in 85+ countries, and an AI rendering pipeline that sped up image output ~70% and cut $50,000+ of outsourcing.' },
         { b: 'Enablement', t: 'Founded and led an internal AI research group and a 100+ member Computational Design Community. The work grew from one-off scripts and tools into structured teaching, then into AI tools that capture institutional knowledge and put it back to work across AIGC, parametric design and marketing. Every request is treated as a product question: the smallest set of features that helps the most people, wired into a loop that keeps improving and steadily lifts firm-wide digital maturity.' },
@@ -80,12 +80,12 @@
     },
     zh: {
       name: '王雨施 <span style="opacity:.45;font-size:.62em;letter-spacing:.04em">Yushi Wang</span>',
-      title: '体验设计师 · 设计技术专家&nbsp;&nbsp;—&nbsp;&nbsp;建筑科技 · BIM · AI · 全栈',
+      title: '首席体验设计师 · 设计技术专家&nbsp;&nbsp;—&nbsp;&nbsp;建筑科技 · BIM · AI · 全栈',
       contact: 'yushiw620@gmail.com&nbsp;&nbsp;·&nbsp;&nbsp;上海&nbsp;·&nbsp;<b>(+86) 139-1616-4162</b>',
       photo: true,
       sums_h: '个人优势',
       sums: [
-        { b: '工作背景', t: '约 200 人规模的全球 AEC 设计公司里唯一的设计技术专家。向上直接对接建筑科学、空间策略、医疗三大业务线的 Principal 负责人，把各专业的真实诉求落成真正解决问题的工具；向下与一线设计师、Senior Associate 一起打磨落地细节。用户研究、交互设计、反复测试、设计规范、上线发布、数据追踪到内部推广全流程一手闭环，相当于在公司内部独立运营一支产品团队。' },
+        { b: '工作背景', t: '约 200 人规模的全球 AEC 设计公司里唯一的设计技术专家。与建筑科学、空间策略、设计可视化三大业务线的 Principal 负责人深度协作，沉到各专业团队里观察真实工作流，主动挖掘阻碍设计推进的瓶颈与不被言明的痛点。把这些发现落成可上线的工具并一手闭环：用户研究、交互设计、反复测试、设计规范、上线发布、数据追踪到内部推广。相当于在公司内部独立运营一支产品团队，先把问题找出来，再把方案做出来、推下去。' },
         { b: '体验设计', t: '完整把控技术型 AEC / BIM 工具的体验设计链路。以用户访谈、工作流分析及定性定量研究为起点，把调研洞察转化为明确的产品改进方向；在多个备选方案中权衡取舍，做低保真到高保真原型，并联合真实用户与开发工程师反复验证。最终上线由可用性测试与行为数据说话，选定方案一路跟到软件落地，实现阶段影响设计的问题一并解决。' },
         { b: '以往成就', t: '深耕 Autodesk 的 AEC 工具十余年，Revit、AutoCAD、Dynamo 信手拈来，熟知行业真正赖以运转的各类 BIM 工作流。这份领域积淀沉淀为实打实的产品：可持续设计平台斩获 AIA TAP 创新奖、覆盖全球 85+ 个国家用户；AI 渲染管线将出图效率提升约 70%，节省外包成本 5 万美元以上。' },
         { b: '团队赋能', t: '创立并带领公司内部 AI 研究小组，组建起 100+ 人的 Computational Design Community。从早期持续打磨脚本与工具，到体系化教学，再到用 AI 工具把信息与知识沉淀内化，业务半径延伸至 AIGC、参数化设计与 Marketing。始终以产品思维拆解每一个需求：用最精简的一组功能、最高效地惠及最多的人，并嵌入持续迭代的闭环，稳步抬升全公司的数字化水平。' },
