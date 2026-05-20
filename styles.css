@@ -2563,7 +2563,7 @@ body.rz-open .cursor-dot, body.rz-open .cursor-ring { opacity: 0 !important; }
   align-items: start; margin: 0; padding: 6px 0;
   border-top: 1px solid var(--rz-line);
 }
-.rz-sum p:first-child { border-top: 0; padding-top: 1px; }
+.rz-sum p:first-of-type { border-top: 0; padding-top: 1px; }
 .rz-sum p:last-child { padding-bottom: 0; }
 .rz-sum b {
   color: var(--rz-acc); font-weight: 600;
