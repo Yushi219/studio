@@ -160,7 +160,7 @@
         { b: 'Experience Design', t: 'Runs the design arc for technical AEC and BIM tools. Turns user research and workflow analysis into product improvements. Prototypes low to high fidelity and validates with the designers, SA and PMs. Usability and behavioral data decide what ships, carried through to software.' },
         { b: 'Impact', t: 'Decade-plus in the Autodesk AEC ecosystem, turning design and BIM fluency into products: a sustainability platform that won the AIA TAP Innovation Award and reached users in 85+ countries, and an AI rendering pipeline that sped up image output ~70% and cut $50,000+ of outsourcing.' },
         { b: 'Enablement', t: 'Led an internal AI research group and a 100+ member Computational Design Community. Grew it from one-off scripts into structured teaching and AI tools that capture institutional knowledge across AIGC, parametric design and marketing. Treats every request as a product question and lifting firm-wide digital maturity.' },
-        { b: 'Profile', t: 'Goal-oriented and detail-minded. Cuts to the core of a messy problem, names the real bottleneck and user pain, and pushes the fix to a shipped release. Uses vibe coding to turn ideas into validated prototypes within days. Communicates clearly in writing and visuals; fluent English; fast learner.' }
+        { b: 'Profile', t: 'Goal-oriented and detail-minded. Cuts to the core of a messy problem, names the real bottleneck and user pain, and pushes the fix to a shipped release. Uses vibe coding to turn ideas into validated prototypes in days. Communicates clearly in writing, visuals and presentations; fluent English; fast learner.' }
       ],
       prj_h: 'Selected Projects',
       prj: [
